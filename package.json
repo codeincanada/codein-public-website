@@ -1,0 +1,22 @@
+{
+  "name": "codein-public-website",
+  "version": "1.0.0",
+  "description": "Published with Firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codein-ca/codein-public-website.git"
+  },
+  "keywords": [
+    "firebase"
+  ],
+  "author": "Daniel Santos <daniel@brasileiro.ca> (https://brasileiro.ca/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codein-ca/codein-public-website/issues"
+  },
+  "homepage": "https://github.com/codein-ca/codein-public-website#readme"
+}
