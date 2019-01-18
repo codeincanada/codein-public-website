@@ -3,7 +3,7 @@
 Published with Firebase
 
 - Subdomains
-    - [blog](https://blog.codein.ca)
-    - [staging](https://staging.codein.ca)
-    - [pwa](https://pwa.codein.ca)
-    - [api](https://api.codein.ca)
+    - [blog - problem with certificate](https://blog.codein.ca)
+    - [staging - problem with certificate](https://staging.codein.ca)
+    - [pwa - problem with certificate](https://pwa.codein.ca)
+    - [api - secured](https://api.codein.ca)
