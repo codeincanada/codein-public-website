@@ -1,0 +1,105 @@
+/*utils*/
+.fc {
+  display: flex;
+  flex-direction: column;
+}
+
+.fr {
+  display: flex;
+}
+
+.centralized {
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************************/
+/*regular content*/
+/**************************************/
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3 {
+  //font-family: 'Concert One', cursive;
+  margin: 0;
+}
+
+article, section {
+  padding: 1rem;
+}
+
+
+/**/
+.header {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/pexels-photo-58461-big.jpeg");
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    background-image: url("images/pexels-photo-58461-medium.jpeg");
+  }
+
+  @media (max-width: 480px) and (orientation: portrait) {
+    background-size: cover;
+    background-image: url("images/pexels-photo-58461-small.jpeg");
+
+    /*specific: overrides behavior on mobile view*/
+    align-items: flex-start;
+  }
+
+  .panel--translucid {
+    color: #ebebeb;
+    background-color: #1a190085;
+    box-shadow: 0 0 8px #000000b8;
+    padding: 2rem;
+    border-radius: 4px;
+    text-shadow: 0 0 11px black;
+
+    @media (max-width: 480px) and (orientation: portrait) {
+      box-shadow: none;
+      background-color: transparent;
+      //flex-direction: row;
+    }
+  }
+
+  .welcome {
+    text-decoration: overline;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: auto;
+    white-space: nowrap;
+    text-align: center;
+    color: mintcream;
+    //color: #ffa100;
+
+    @media (max-width: 480px) and (orientation: portrait) {
+      font-size: 1rem;
+      text-decoration: underline;
+      //border-bottom: 1px dashed hotpink;
+      align-self: center;
+      margin-top: 0;
+      //transform: rotate(90deg) translateY(0rem);
+      //order: 1;
+    }
+  }
+
+  .company-name {
+    text-align: center;
+    font-size: 4rem;
+    text-decoration: underline;
+    text-decoration-color: mintcream;
+    text-decoration-style: wavy;
+    color: tomato;
+
+    @media (max-width: 480px) and (orientation: portrait) {
+      //border-bottom: 1px dashed hotpink;
+      font-size: 3rem;
+    }
+  }
+}

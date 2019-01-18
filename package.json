@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/codein-ca/codein-public-website/issues"
   },
-  "homepage": "https://github.com/codein-ca/codein-public-website#readme"
+  "homepage": "https://github.com/codein-ca/codein-public-website#readme",
+  "dependencies": {
+    "bootstrap": "^4.2.1"
+  }
 }
