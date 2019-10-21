@@ -51,11 +51,12 @@ body, html {
     margin: 0;
   }
 .mode-name-wrapper {
+  font-family: monospace;
   position: absolute;
   bottom: 12vh;
   left: 0;
   right: 0;
-  color: hotpink;;
+  color: whitesmoke;;
   text-align: center;
   text-transform: uppercase;
   font-size: 17px;

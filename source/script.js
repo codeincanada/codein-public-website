@@ -22,7 +22,7 @@ var modeList = [
     duration = 2500;
 
 var i = 0;
-var activate = setInterval(function () {
+const activate = () => setInterval(function () {
     if (i == modeList.length) i = 0;
     var mode = modeList[i]
     elem.style.mixBlendMode = mode;
@@ -31,6 +31,3 @@ var activate = setInterval(function () {
 }, duration);
 
 activate();
-
-
-
