@@ -1,4 +1,1 @@
-# codein.ca's website
-
-- Open source
-- Published with Google's Firebase
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).
