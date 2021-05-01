@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="flex bg-gray-700 w-screen h-screen">
       <Head>
-        <title>Create Next App</title>
+        <title>Homepage</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"
