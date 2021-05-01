@@ -7,6 +7,11 @@ export default function Home() {
     <div className="flex bg-gray-700 w-screen h-screen">
       <Head>
         <title>Create Next App</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
@@ -21,6 +26,9 @@ export default function Home() {
           </Link>
         </h1>
       </main>
+
+      {/* font-family: 'Roboto', sans-serif;*/}
+      {/* font-family: 'Permanent Marker', cursive;*/}
     </div>
   );
 }
