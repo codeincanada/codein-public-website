@@ -1,20 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
-import "tailwindcss/tailwind.css";
 import Layout from "../components/layout";
 // https://tailwindcss.com/docs/guides/nextjs
 export default function Home() {
   return (
-    <Layout>
+    <Layout isHome>
       <Head>
         <title>Homepage</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap"
-        />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <main className="container bg-gray-500 m-auto rounded-md shadow-md">
@@ -28,9 +20,6 @@ export default function Home() {
           </Link>
         </h1>
       </main>
-
-      {/* font-family: 'Roboto', sans-serif;*/}
-      {/* font-family: 'Permanent Marker', cursive;*/}
     </Layout>
   );
 }

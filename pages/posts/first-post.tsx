@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
 import Layout from "../../components/layout";
@@ -9,6 +8,7 @@ export default function FirstPost() {
       <Head>
         <title>I am a post</title>
       </Head>
+
       <main>
         {/* TODO #1: Export as a shared component */}
         <h1 className={"text-xl text-white p-6"}>First Post</h1>
@@ -18,8 +18,6 @@ export default function FirstPost() {
           height={200}
           alt="LinkedIn default photo"
         />
-        <hr />
-        <Link href={"/"}>Back home</Link>
       </main>
     </Layout>
   );
