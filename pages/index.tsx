@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
 import "tailwindcss/tailwind.css";
+import Layout from "../components/layout";
 // https://tailwindcss.com/docs/guides/nextjs
 export default function Home() {
   return (
-    <div className="flex bg-gray-700 w-screen h-screen">
+    <Layout>
       <Head>
         <title>Homepage</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
 
       <main className="container bg-gray-500 m-auto rounded-md shadow-md">
+        {/* TODO #1: Export as a shared component */}
         <h1 className={"text-xl text-white p-6"}>
           Learn{" "}
           <Link href={"/posts/first-post"}>
@@ -29,6 +31,6 @@ export default function Home() {
 
       {/* font-family: 'Roboto', sans-serif;*/}
       {/* font-family: 'Permanent Marker', cursive;*/}
-    </div>
+    </Layout>
   );
 }

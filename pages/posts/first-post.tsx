@@ -9,15 +9,18 @@ export default function FirstPost() {
       <Head>
         <title>I am a post</title>
       </Head>
-      <h1>First Post</h1>
-      <Image
-        src={"/images/profile-pic.jpeg"}
-        width={200}
-        height={200}
-        alt="LinkedIn default photo"
-      />
-      <hr />
-      <Link href={"/"}>Back home</Link>
+      <main>
+        {/* TODO #1: Export as a shared component */}
+        <h1 className={"text-xl text-white p-6"}>First Post</h1>
+        <Image
+          src={"/images/profile-pic.jpeg"}
+          width={200}
+          height={200}
+          alt="LinkedIn default photo"
+        />
+        <hr />
+        <Link href={"/"}>Back home</Link>
+      </main>
     </Layout>
   );
 }

@@ -1,11 +1,6 @@
 import { ReactNode } from "react";
+import "tailwindcss/tailwind.css";
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <div
-      style={{ maxWidth: "36rem", padding: "0 1rem", margin: "3rem auto 6rem" }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="flex bg-gray-700 w-screen h-screen">{children}</div>;
 }
