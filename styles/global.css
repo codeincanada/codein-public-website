@@ -1,6 +1,28 @@
 body {
   font-size: 20px;
   /*font-family: "Open Sans", sans-serif;*/
+  background: hsla(355, 67%, 39%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(355, 67%, 39%, 1) 0%,
+    hsla(302, 96%, 18%, 1) 51%,
+    hsla(309, 100%, 8%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(355, 67%, 39%, 1) 0%,
+    hsla(302, 96%, 18%, 1) 51%,
+    hsla(309, 100%, 8%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(355, 67%, 39%, 1) 0%,
+    hsla(302, 96%, 18%, 1) 51%,
+    hsla(309, 100%, 8%, 1) 100%
+  );
 }
 h1,
 h2,

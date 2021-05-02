@@ -10,7 +10,7 @@ export default function Layout({
   isHome?: boolean;
 }) {
   return (
-    <div className="flex bg-gray-700 w-screen h-screen">
+    <div className="flex w-screen h-screen">
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
