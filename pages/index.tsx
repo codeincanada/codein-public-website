@@ -12,7 +12,7 @@ export default function Home() {
       <main className="container bg-gray-500 m-auto rounded-md shadow-md">
         {/* TODO #1: Export as a shared component */}
         <h1 className={"text-xl text-white p-6"}>
-          Learn{" "}
+          <span>Learn </span>
           <Link href={"/posts/first-post"}>
             <span className={"text-black bg-white font-medium"}>
               with my posts
