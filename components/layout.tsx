@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -9,8 +9,11 @@ export default function Layout({
   children: ReactNode;
   isHome?: boolean;
 }) {
+  const [url] = useState(() =>
+    typeof window !== "undefined" ? window.location.hostname : ""
+  );
   return (
-    <div className="subpixel-antialiased flex flex-col container m-auto w-screen h-screen">
+    <div className="subpixel-antialiased  flex flex-col container m-auto w-screen h-screen">
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -19,10 +22,11 @@ export default function Layout({
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
+        <title>{url}</title>
       </Head>
       {isHome ? (
         <header className="p-4 flex">
-          <nav className="flex-grow flex justify-between text-gray-400 text-sm font-serif cursor-pointer">
+          <nav className="flex-grow flex justify-between text-gray-400 text-xs cursor-pointer">
             <Link href={"https://ca.linkedin.com/in/brasileiro"}>
               <h2>LinkedIn</h2>
             </Link>
@@ -33,7 +37,7 @@ export default function Layout({
               <h2>🐦</h2>
             </Link>
             <Link href={"https://astra.datastax.com"}>
-              <h2 className="text-white">also️ working on...</h2>
+              <h2 className="text-red-600">🔙</h2>
             </Link>
           </nav>
         </header>
@@ -49,12 +53,17 @@ export default function Layout({
           <hr />
         </>
       )}
-      <main className="container flex-grow">{children}</main>
-      <footer className="w-full text-right md:text-left">
+      <main className="flex-grow flex">{children}</main>
+      <footer className=" p-3 flex justify-between align-between flex-wrap text-gray-800 text-xs">
+        {url && (
+          <Link href={"/"}>
+            <span className="">{url}</span>
+          </Link>
+        )}
         <Link href={"https://unsplash.com/photos/pUGRSh9dS9M"}>
           <span
             title={"This amazing photo is from Willian Justen"}
-            className="text-gray-500 md:text-white text-xs md:text-md"
+            className=""
           >
             Photo credits
           </span>
