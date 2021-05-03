@@ -37,7 +37,7 @@ export default function Layout({
               <h2>🐦</h2>
             </Link>
             <Link href={"https://astra.datastax.com"}>
-              <h2 className="text-red-600">🔙</h2>
+              <h2>🔙</h2>
             </Link>
           </nav>
         </header>
@@ -54,7 +54,7 @@ export default function Layout({
         </>
       )}
       <main className="flex-grow flex">{children}</main>
-      <footer className=" p-3 flex justify-between align-between flex-wrap text-gray-800 text-xs">
+      <footer className="text-pink-400 p-3 flex justify-between align-between flex-wrap text-gray-800 text-xs">
         {url && (
           <Link href={"/"}>
             <span className="">{url}</span>

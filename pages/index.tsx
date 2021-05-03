@@ -19,11 +19,11 @@ export default function Home() {
         {/* </main>*/}
         <aside
           className={
-            "transition delay-150 duration-300 ease-in-out pt-1 pl-4 pr-4 pb-1 md:px-10 lg:p-10 overscroll-auto overflow-auto m-auto md:rounded-xl text-gray-300   bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black border border-black border-opacity-20 shadow-lg"
+            "transition delay-150 duration-300 ease-in-out pt-1 pl-4 pr-4 pb-1 md:px-10 lg:p-10 m-auto md:rounded-xl text-gray-300 bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black border border-black border-opacity-20 shadow-lg"
           }
         >
           {/* <h2 className="underline leading-loose">suggested posts:</h2>*/}
-          <ol className="md:list-decimal text-lg cursor-pointer divide-y divide-pink-400 divide-dotted leading-loose">
+          <ol className="md:list-decimal md:text-xl cursor-pointer space-y-4 divide-y divide-pink-400 divide-dotted leading-loose">
             <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
               <Link
                 href={"https://reactjs.org/docs/optimizing-performance.html"}
