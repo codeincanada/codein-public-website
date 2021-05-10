@@ -7,7 +7,7 @@ export default function Home() {
       <Head>
         <title>Homepage</title>
       </Head>
-      <section className="flex flex-grow border border-black border-opacity-20 shadow-lg">
+      <section className="flex flex-grow md:rounded-xl  border border-black border-opacity-20 bg-opacity-10 bg-gray-800 shadow-lg">
         <aside
           id={"article-list"}
           className={
