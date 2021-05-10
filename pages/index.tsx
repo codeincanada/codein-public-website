@@ -1,12 +1,8 @@
-import Head from "next/head";
 import Layout from "../components/layout";
 // https://tailwindcss.com/docs/guides/nextjs
 export default function Home() {
   return (
     <Layout isHome>
-      <Head>
-        <title>Homepage</title>
-      </Head>
       <section className="flex flex-grow md:rounded-xl  border border-black border-opacity-20 bg-opacity-10 bg-gray-800 shadow-lg">
         <aside
           id={"article-list"}

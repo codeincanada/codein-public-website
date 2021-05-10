@@ -5,8 +5,6 @@ if (typeof window !== "undefined") {
   if (window.location.hostname.includes("codein")) {
     // eslint-disable-next-line no-undef
     GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID_CODEIN_CA;
-  } else {
-    console.log("🤷🏽‍♂️", window.location);
   }
 }
 
