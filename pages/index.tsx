@@ -3,15 +3,15 @@ import Layout from "../components/layout";
 export default function Home() {
   return (
     <Layout isHome>
-      <section className="flex flex-grow md:rounded-xl  border border-black border-opacity-20 bg-opacity-10 bg-gray-800 shadow-lg">
+      <section className="flex flex-grow">
         <aside
           id={"article-list"}
           className={
-            "m-auto transition delay-150 duration-300 ease-in-out p-10 md:rounded-xl text-gray-300 bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black"
+            "m-auto transition duration-200 ease-out p-10 md:rounded-xl text-gray-300 bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black"
           }
         >
           {/* <h2 className="underline leading-loose">suggested posts:</h2>*/}
-          <ol className="md:list-decimal list-inside md:text-xl cursor-pointer space-y-4 divide-y divide-pink-400 divide-dotted leading-loose">
+          <ol className="md:list-decimal list-inside text-xl cursor-pointer space-y-4 divide-y divide-pink-400 divide-dotted leading-loose">
             <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
               <a
                 href={"https://reactjs.org/docs/optimizing-performance.html"}

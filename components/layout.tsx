@@ -25,47 +25,47 @@ export default function Layout({
         <link rel="manifest" href="/site.webmanifest" />
         <title>{url}</title>
       </Head>
-      {isHome ? (
-        <header className="p-4 flex">
-          <nav className="flex-grow flex justify-between text-gray-400 text-xs cursor-pointer">
-            <a href={"https://ca.linkedin.com/in/brasileiro"}>
-              <h2>LinkedIn</h2>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={"https://github.com/w-b-dev"}
-            >
-              <h2>Github</h2>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={"https://mobile.twitter.com/brasileiro_ca"}
-            >
-              <h2>🐦</h2>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={"https://astra.datastax.com"}
-            >
-              <h2>🔙</h2>
-            </a>
-          </nav>
-        </header>
-      ) : (
-        <>
-          <header className="p-4 flex">
-            <nav className="flex-grow flex justify-between text-gray-700">
-              <Link href={"/"}>
-                <h2>🔙 home</h2>
-              </Link>
-            </nav>
-          </header>
-          <hr />
-        </>
-      )}
+      {/* {isHome ? (*/}
+      <header className="w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20">
+        <nav className="flex-grow flex justify-between text-gray-400 uppercase">
+          <a href={"https://ca.linkedin.com/in/brasileiro"}>
+            <h2>LinkedIn</h2>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={"https://github.com/w-b-dev"}
+          >
+            <h2>Github</h2>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={"https://mobile.twitter.com/brasileiro_ca"}
+          >
+            <h2>TWITTER</h2>
+          </a>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={"https://astra.datastax.com"}
+          >
+            <h2>DAY TIME</h2>
+          </a>
+        </nav>
+      </header>
+      {/* ) : (*/}
+      {/*  <>*/}
+      {/*    <header className="p-4 flex">*/}
+      {/*      <nav className="flex-grow flex justify-between text-gray-700">*/}
+      {/*        <Link href={"/"}>*/}
+      {/*          <h2>🔙 home</h2>*/}
+      {/*        </Link>*/}
+      {/*      </nav>*/}
+      {/*    </header>*/}
+      {/*    <hr />*/}
+      {/*  </>*/}
+      {/* )}*/}
       <main className="flex-grow flex">{children}</main>
       <footer className="text-pink-400 p-3 flex justify-between align-between flex-wrap text-gray-800 text-xs">
         {url && (

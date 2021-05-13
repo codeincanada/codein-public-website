@@ -8,30 +8,8 @@ body {
   background-blend-mode: color-dodge;
   background-position: center;
   background-repeat: no-repeat;
-
-  /*PREVIOUS ATTEMPT AT A GRADIENT BG*/
-  /*background: hsla(355, 67%, 39%, 1);
-  background: linear-gradient(
-    90deg,
-    hsla(355, 67%, 39%, 1) 0%,
-    hsla(302, 96%, 18%, 1) 51%,
-    hsla(309, 100%, 8%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(355, 67%, 39%, 1) 0%,
-    hsla(302, 96%, 18%, 1) 51%,
-    hsla(309, 100%, 8%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(355, 67%, 39%, 1) 0%,
-    hsla(302, 96%, 18%, 1) 51%,
-    hsla(309, 100%, 8%, 1) 100%
-  );*/
 }
+
 h1,
 h2,
 h3,
@@ -39,4 +17,8 @@ h4,
 h5,
 h6 {
   font-family: Roboto, sans-serif;
+}
+
+a {
+  cursor: pointer;
 }
