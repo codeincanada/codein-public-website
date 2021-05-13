@@ -14,6 +14,17 @@ export default function Home() {
           <ol className="md:list-decimal list-inside text-xl cursor-pointer space-y-4 divide-y divide-pink-400 divide-dotted leading-loose">
             <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
               <a
+                href={
+                  "https://epicreact.dev/one-react-mistake-thats-slowing-you-down"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Composition with React ✅</span>
+              </a>
+            </li>
+            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+              <a
                 href={"https://reactjs.org/docs/optimizing-performance.html"}
                 target="_blank"
                 rel="noreferrer"
@@ -28,17 +39,6 @@ export default function Home() {
                 rel="noreferrer"
               >
                 <span>An extensive guide on how to fetch data with Hooks</span>
-              </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
-              <a
-                href={
-                  "https://epicreact.dev/one-react-mistake-thats-slowing-you-down"
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>Composition with React</span>
               </a>
             </li>
             <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
@@ -77,6 +77,17 @@ export default function Home() {
                 rel="noreferrer"
               >
                 <span>Cassandra with Node (Azure)</span>
+              </a>
+            </li>
+            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+              <a
+                href={
+                  "https://twitter.com/iamakulov/status/1385230664648253443"
+                }
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>t-tip: React Memo and Context</span>
               </a>
             </li>
           </ol>
