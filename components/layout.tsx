@@ -26,8 +26,8 @@ export default function Layout({
         <title>{url}</title>
       </Head>
       {/* {isHome ? (*/}
-      <header className="w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20">
-        <nav className="flex-grow flex justify-between text-gray-400 uppercase">
+      <header className="w-full md:w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20">
+        <nav className="flex-grow flex justify-between text-gray-400 uppercase text-xs md:text-base">
           <a href={"https://ca.linkedin.com/in/brasileiro"}>
             <h2>LinkedIn</h2>
           </a>
@@ -67,12 +67,13 @@ export default function Layout({
       {/*  </>*/}
       {/* )}*/}
       <main className="flex-grow flex">{children}</main>
-      <footer className="text-pink-400 p-3 flex justify-between align-between flex-wrap text-gray-800 text-xs">
+      <footer className="text-pink-400 p-3 flex justify-end align-center flex-wrap text-gray-800 text-xs">
         {url && (
           <Link href={"/"}>
             <span className="">{url}</span>
           </Link>
         )}
+        <span>&nbsp;/&nbsp;</span>
         <a
           target="_blank"
           rel="noreferrer"
