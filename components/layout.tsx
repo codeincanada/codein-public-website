@@ -26,31 +26,31 @@ export default function Layout({
         <title>{url}</title>
       </Head>
       {/* {isHome ? (*/}
-      <header className="w-full md:w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20">
-        <nav className="flex-grow flex justify-between text-gray-400 uppercase text-xs md:text-base">
+      <header className="w-full md:w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20 uppercase">
+        <nav className="flex-grow flex justify-between text-gray-400 text-xs md:text-base">
           <a href={"https://ca.linkedin.com/in/brasileiro"}>
-            <h2>LinkedIn</h2>
+            <h2>linkedin</h2>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://github.com/w-b-dev"}
           >
-            <h2>Github</h2>
+            <h2>github</h2>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://mobile.twitter.com/brasileiro_ca"}
           >
-            <h2>TWITTER</h2>
+            <h2>twitter</h2>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://astra.datastax.com"}
           >
-            <h2>DAY TIME</h2>
+            <h2>daytime</h2>
           </a>
         </nav>
       </header>
