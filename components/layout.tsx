@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
+import TitleCA from "./title";
 
 export default function Layout({
   children,
@@ -13,7 +14,7 @@ export default function Layout({
     typeof window !== "undefined" ? window.location.hostname : ""
   );
   return (
-    <div className="subpixel-antialiased  flex flex-col container m-auto w-screen h-screen">
+    <div className="subpixel-antialiased font-serif flex flex-col container m-auto w-screen h-screen">
       <Head>
         <meta name="referrer" content="origin" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -33,28 +34,28 @@ export default function Layout({
             rel="noreferrer"
             href={"https://ca.linkedin.com/in/brasileiro"}
           >
-            <h2>linkedin</h2>
+            <TitleCA>linkedin</TitleCA>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://github.com/w-b-dev"}
           >
-            <h2>github</h2>
+            <TitleCA>github</TitleCA>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://mobile.twitter.com/brasileiro_ca"}
           >
-            <h2>twitter</h2>
+            <TitleCA>twitter</TitleCA>
           </a>
           <a
             target="_blank"
             rel="noreferrer"
             href={"https://astra.datastax.com"}
           >
-            <h2>daytime</h2>
+            <TitleCA>Serverless DB</TitleCA>
           </a>
         </nav>
       </header>

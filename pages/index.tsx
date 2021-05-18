@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import ListItemCA from "../components/listItem";
 // https://tailwindcss.com/docs/guides/nextjs
 export default function Home() {
   return (
@@ -11,46 +12,32 @@ export default function Home() {
           }
         >
           {/* <h2 className="underline leading-loose">suggested posts:</h2>*/}
-          <ol className="md:list-decimal list-inside text-xl cursor-pointer space-y-4 divide-y divide-pink-400 divide-dotted leading-loose">
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+          {/* divide-y divide-pink-400 divide-dotted */}
+          <ol className="md:list-decimal list-inside leading-loose">
+            <ListItemCA isHighlighted>
               <a
                 href={
-                  "https://epicreact.dev/one-react-mistake-thats-slowing-you-down"
+                  "https://twitter.com/iamakulov/status/1385230664648253443"
                 }
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Composition with React ✅</span>
+                <span>[short] React Memo and Context</span>
               </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+            </ListItemCA>
+            <ListItemCA isHighlighted>
               <a
-                href={"https://reactjs.org/docs/optimizing-performance.html"}
+                href={
+                  "https://overreacted.io/a-complete-guide-to-useeffect/#tldr"
+                }
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Optimize your React app</span>
+                <span>Complete guide to useEffect</span>
               </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
-              <a
-                href={"https://www.robinwieruch.de/react-hooks-fetch-data"}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>An extensive guide on how to fetch data with Hooks</span>
-              </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
-              <a
-                href={"https://nextjs.org/blog/incremental-adoption"}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>How to incrementally start using Next.js</span>
-              </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+            </ListItemCA>
+
+            <ListItemCA isHighlighted>
               <a
                 href={"https://tailwindcss.com/docs/cursor"}
                 target="_blank"
@@ -58,8 +45,37 @@ export default function Home() {
               >
                 <span>Tailwind docs 📌</span>
               </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+            </ListItemCA>
+            <ListItemCA>
+              <a
+                href={"https://www.robinwieruch.de/react-hooks-fetch-data"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>An extensive guide on how to fetch data with Hooks</span>
+              </a>
+            </ListItemCA>
+            <ListItemCA>
+              <a
+                href={"https://reactjs.org/docs/optimizing-performance.html"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Optimize your React app</span>
+              </a>
+            </ListItemCA>
+
+            <ListItemCA>
+              <a
+                href={"https://nextjs.org/blog/incremental-adoption"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>How to incrementally start using Next.js</span>
+              </a>
+            </ListItemCA>
+
+            <ListItemCA>
               <a
                 href={"https://nodejs.org/dist/latest/docs/api/"}
                 target="_blank"
@@ -67,8 +83,8 @@ export default function Home() {
               >
                 <span>Node.js official docs</span>
               </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+            </ListItemCA>
+            <ListItemCA>
               <a
                 href={
                   "https://docs.microsoft.com/en-us/azure/cosmos-db/create-cassandra-nodejs"
@@ -78,18 +94,19 @@ export default function Home() {
               >
                 <span>Cassandra with Node (Azure)</span>
               </a>
-            </li>
-            <li className="hover:text-pink-400 filter drop-shadow transition delay-50 duration-200 ease-in-out">
+            </ListItemCA>
+
+            <ListItemCA>
               <a
                 href={
-                  "https://twitter.com/iamakulov/status/1385230664648253443"
+                  "https://epicreact.dev/one-react-mistake-thats-slowing-you-down"
                 }
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>t-tip: React Memo and Context</span>
+                <span>Composition with React ✅</span>
               </a>
-            </li>
+            </ListItemCA>
           </ol>
         </aside>
         {/* MAIN READING PANEL*/}
