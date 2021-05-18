@@ -19,7 +19,7 @@ export default function Layout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald&display=swap"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -28,7 +28,11 @@ export default function Layout({
       {/* {isHome ? (*/}
       <header className="w-full md:w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20 uppercase">
         <nav className="flex-grow flex justify-between text-gray-400 text-xs md:text-base">
-          <a href={"https://ca.linkedin.com/in/brasileiro"}>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={"https://ca.linkedin.com/in/brasileiro"}
+          >
             <h2>linkedin</h2>
           </a>
           <a
