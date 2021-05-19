@@ -4,8 +4,8 @@ module.exports = {
   // darkMode: "media", // or 'class'
   theme: {
     fontFamily: {
-      sans: ["Oswald", "sans-serif"],
-      serif: ["Caveat", "cursive"],
+      sans: ["Open Sans", "sans-serif"],
+      serif: ["Roboto", "cursive"],
     },
     extend: {},
   },

@@ -20,7 +20,7 @@ export default function Layout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
