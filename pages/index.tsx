@@ -11,8 +11,6 @@ export default function Home() {
             "m-auto transition duration-200 ease-out p-10 md:rounded-xl text-gray-300 bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black"
           }
         >
-          {/* <h2 className="underline leading-loose">suggested posts:</h2>*/}
-          {/* divide-y divide-pink-400 divide-dotted */}
           <ol className="md:list-decimal list-inside leading-loose">
             <ListItemCA isHighlighted>
               <a
@@ -22,7 +20,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>[short] React Memo and Context</span>
+                <span>[react] Memo and Context issues</span>
               </a>
             </ListItemCA>
             <ListItemCA isHighlighted>
@@ -33,17 +31,18 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Complete guide to useEffect</span>
+                <span>[react] useEffect as a pro</span>
               </a>
             </ListItemCA>
-
             <ListItemCA isHighlighted>
               <a
-                href={"https://tailwindcss.com/docs/cursor"}
+                href={
+                  "https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates"
+                }
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Tailwind docs 📌</span>
+                <span>[react] useState Lazy Initialization</span>
               </a>
             </ListItemCA>
             <ListItemCA>
@@ -64,7 +63,15 @@ export default function Home() {
                 <span>Optimize your React app</span>
               </a>
             </ListItemCA>
-
+            <ListItemCA>
+              <a
+                href={"https://tailwindcss.com/docs/cursor"}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>Tailwind docs 📌</span>
+              </a>
+            </ListItemCA>
             <ListItemCA>
               <a
                 href={"https://nextjs.org/blog/incremental-adoption"}
@@ -109,15 +116,6 @@ export default function Home() {
             </ListItemCA>
           </ol>
         </aside>
-        {/* MAIN READING PANEL*/}
-        {/* <main className="flex-1 bg-white bg-opacity-20">*/}
-        {/*  <div*/}
-        {/*    title="keep swimming"*/}
-        {/*    className="text-6xl leading-loose text-center w-full"*/}
-        {/*  >*/}
-        {/*    🐠*/}
-        {/*  </div>*/}
-        {/* </main>*/}
       </section>
     </Layout>
   );
