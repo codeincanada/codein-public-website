@@ -20,7 +20,7 @@ export default function Layout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@300&display=swap"
         />
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -59,18 +59,6 @@ export default function Layout({
           </a>
         </nav>
       </header>
-      {/* ) : (*/}
-      {/*  <>*/}
-      {/*    <header className="p-4 flex">*/}
-      {/*      <nav className="flex-grow flex justify-between text-gray-700">*/}
-      {/*        <Link href={"/"}>*/}
-      {/*          <h2>🔙 home</h2>*/}
-      {/*        </Link>*/}
-      {/*      </nav>*/}
-      {/*    </header>*/}
-      {/*    <hr />*/}
-      {/*  </>*/}
-      {/* )}*/}
       <main className="flex-grow flex">{children}</main>
       <footer className="text-pink-400 p-3 flex justify-end align-center flex-wrap text-gray-800 text-xs">
         {url && (

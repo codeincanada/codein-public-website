@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["Open Sans", "sans-serif"],
-      serif: ["Roboto", "cursive"],
+      serif: ["Raleway", "cursive"],
     },
     extend: {},
   },

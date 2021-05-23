@@ -20,7 +20,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>[react] Memo and Context issues</span>
+                <span>Memo and Context issues</span>
               </a>
             </ListItemCA>
             <ListItemCA isHighlighted>
@@ -31,7 +31,7 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>[react] useEffect as a pro</span>
+                <span>useEffect as a pro</span>
               </a>
             </ListItemCA>
             <ListItemCA isHighlighted>
@@ -42,10 +42,10 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>[react] useState Lazy Initialization</span>
+                <span>useState Lazy Initialization</span>
               </a>
             </ListItemCA>
-            <ListItemCA>
+            <ListItemCA isHighlighted>
               <a
                 href={"https://www.robinwieruch.de/react-hooks-fetch-data"}
                 target="_blank"
