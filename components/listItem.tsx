@@ -13,7 +13,7 @@ export default function ListItemCA({
       {children}
     </li>
   ) : (
-    <li className="font-light px-6 md:w-3/4 mx-auto my-4 text-lg md:text-2xl text-white hover:text-pink-500 border-b-2 border-solid border-pink-500 hover:border-white border-opacity-25 transition delay-50 duration-200 ease-in-out">
+    <li className="font-serif px-6 md:w-3/4 mx-auto my-4 text-3xl md:text-4xl text-white hover:text-pink-500 border-b-2 border-solid border-pink-500 hover:border-white border-opacity-25 transition delay-50 duration-200 ease-in-out">
       {children}
     </li>
   );
