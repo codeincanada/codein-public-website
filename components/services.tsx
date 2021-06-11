@@ -3,11 +3,11 @@ import React from "react";
 
 export function Services() {
   return (
-    <div className={"border bg-pink-700 bg-opacity-60 text-white p-4"}>
-      <h1 className={"border-b-2 leading-relaxed text-2xl mb-4"}>
+    <div className={"border bg-purple-600 bg-opacity-95 text-white p-4"}>
+      <h1 className={"border-b-2 leading-relaxed text-xl mb-4"}>
         💡Services we offer:
       </h1>
-      <div className={"px-6 flex flex-col leading-relaxed "}>
+      <div className={"p-6 flex flex-col leading-relaxed text-2xl"}>
         <Link href={"#a"}>
           ✅️ We create websites for companies (institutional, promotional) and
           individuals (resume, blog)

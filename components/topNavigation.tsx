@@ -1,14 +1,21 @@
-import TitleCA from "./title";
+import Link from "next/link";
 import React from "react";
+import { SocialMediaLinks } from "./socialMediaLinks";
+import TitleCA from "./title";
 
 export function TopNavigation() {
   return (
-    <nav className="flex-grow flex justify-between text-white text-xs md:text-base">
-      {/* <span>logo here</span>*/}
-      <a target="_blank" rel="noreferrer" href={"https://codein.ca"}>
-        <TitleCA isTopLevel={true}>codein.ca</TitleCA>
-      </a>
-      <button className={"uppercase font-bold"}>Contact us</button>
+    <nav className="flex-1 flex justify-between text-gray-200 hover:text-gray-400">
+      <span
+        className={
+          "font-serif bg-red-400 bg-opacity-70 hover:bg-opacity-90 hover:text-white px-8 rounded-sm cursor-pointer"
+        }
+      >
+        <Link href="/blog/first-post">
+          <TitleCA isTopLevel>Blog</TitleCA>
+        </Link>
+      </span>
+      <SocialMediaLinks />
     </nav>
   );
 }

@@ -1,18 +1,21 @@
 import Layout from "../components/layout";
-import TitleCA from "../components/title";
-import { SocialMediaLinks } from "../components/socialMediaLinks";
 import { Footer } from "../components/footer";
 import { Services } from "../components/services";
+import { useEffect, useState } from "react";
+
 export default function Home() {
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    setUrl(window?.location.hostname);
+  }, []);
   return (
     <Layout>
-      <section className="flex-1 text-white text-2xl flex justify-center items-center">
-        <TitleCA>
+      <section className="flex-1 flex flex-col">
+        <section className="flex-1 flex flex-col justify-center items-center">
           <Services />
-          <Footer />
-        </TitleCA>
+        </section>
+        <Footer url={url} />
       </section>
-      <SocialMediaLinks />
     </Layout>
   );
 }
