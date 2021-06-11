@@ -12,9 +12,9 @@ const Sidebar = ({
   isCollapsed: boolean;
   isFirstClick: boolean;
   collapseSlot: ReactNode;
-  topSection: ReactNode;
-  bottomSection: ReactNode;
-  socialMediaLinks: ReactNode;
+  topSection?: ReactNode;
+  bottomSection?: ReactNode;
+  socialMediaLinks?: ReactNode;
   footer?: ReactNode;
 }) => {
   const collapsedClassesForBody = "display-none text-white";
@@ -40,9 +40,9 @@ const Sidebar = ({
       </div>
       {!isCollapsed && (
         <div className="p-10">
-          <section className={"mb-6"}>{topSection}</section>
-          <section>{bottomSection}</section>
-          {/* <section>{socialMediaLinks}</section>*/}
+          {topSection && <section className={"mb-6"}>{topSection}</section>}
+          {bottomSection && <section>{bottomSection}</section>}
+          {socialMediaLinks && <section>{socialMediaLinks}</section>}
           {footer && <section>{footer}</section>}
         </div>
       )}

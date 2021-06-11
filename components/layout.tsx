@@ -2,7 +2,6 @@ import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import Sidebar from "./sidebar";
 import { ArticleList } from "./articleList";
-import { Services } from "./services";
 import { TopNavigation } from "./topNavigation";
 import { SocialMediaLinks } from "./socialMediaLinks";
 import { Footer } from "./footer";
@@ -41,7 +40,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         footer={<Footer url={url} />}
         isCollapsed={isCollapsed}
         isFirstClick={isFirstClick}
-        topSection={<Services />}
+        // topSection={<Services />}
         bottomSection={<ArticleList />}
         collapseSlot={
           <button className={"button w-full"} onClick={handleCollapse}>
