@@ -37,6 +37,17 @@ export function ArticleList() {
         </ListItemCA>
         <ListItemCA>
           <a
+            href={
+              "https://kentcdodds.com/blog/how-to-write-a-react-component-in-typescript"
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>React➕️Typescript best practices</span>
+          </a>
+        </ListItemCA>
+        <ListItemCA>
+          <a
             href={"https://www.robinwieruch.de/react-hooks-fetch-data"}
             target="_blank"
             rel="noreferrer"
