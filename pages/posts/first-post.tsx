@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Layout from "../../components/layout";
-import TitleCA from "../../components/title";
+import Title from "../../components/title";
 
 export default function FirstPost() {
   return (
@@ -11,7 +11,7 @@ export default function FirstPost() {
       </Head>
 
       <main>
-        <TitleCA isTopLevel>First Post</TitleCA>
+        <Title isTopLevel>First Post</Title>
         <Image
           src={"/images/profile-pic.jpeg"}
           width={200}

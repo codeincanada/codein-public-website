@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from "react";
 import Head from "next/head";
-import { TopNavigation } from "./topNavigation";
+import { Header } from "./header";
 
 // https://tailwindcss.com/docs/guides/nextjs
 
@@ -22,9 +22,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         <link rel="manifest" href="/site.webmanifest" />
         <title>{url}</title>
       </Head>
-      <header className="w-full md:w-2/3 px-6 py-2 m-auto flex border-b-4 border-pink-400 border-opacity-20 uppercase">
-        <TopNavigation />
-      </header>
+
+      <Header />
+
       <main className={"flex-1 flex flex-col"}>{children}</main>
     </div>
   );

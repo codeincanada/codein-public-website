@@ -4,23 +4,13 @@ import React from "react";
 export function Footer({ url }: { url?: string }) {
   return (
     <footer className="text-pink-400 text-xs text-center">
-      {url && (
-        <>
-          <Link href={url}>
-            <span className="font-serif pl-3 text-gray-200 uppercase">
-              {url}
-            </span>
-          </Link>
-          <span className="px-2">🔥</span>
-        </>
-      )}
-      <span
+      <div
         className={
           "text-red-400 font-bold select-none pointer-events-none whitespace-nowrap"
         }
       >
         Proudly made in Canada 🇨🇦 in 2021
-      </span>
+      </div>
       <a
         target="_blank"
         rel="noreferrer"
@@ -33,6 +23,16 @@ export function Footer({ url }: { url?: string }) {
           Credits for the photo.
         </div>
       </a>
+      {url && (
+        <>
+          <span>🔥</span>
+          <Link href={url}>
+            <span className="font-serif pl-1 text-gray-200 uppercase">
+              {url}
+            </span>
+          </Link>
+        </>
+      )}
     </footer>
   );
 }
