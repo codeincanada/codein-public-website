@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Layout from "../../components/layout";
-import Title from "../../components/title";
+import { Title } from "../../components/title";
 
 export default function FirstPost() {
   return (

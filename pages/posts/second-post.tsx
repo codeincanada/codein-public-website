@@ -7,8 +7,6 @@ export default function SecondPost() {
       <Head>
         <title>I am the blog landing page</title>
       </Head>
-
-      <main></main>
     </Layout>
   );
 }
