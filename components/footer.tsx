@@ -1,9 +1,8 @@
-import Link from "next/link";
 import React from "react";
 
 export function Footer({ url }: { url?: string }) {
   return (
-    <footer className="text-pink-400 text-xs text-center">
+    <footer className="text-pink-400 text-xs text-center flex justify-around">
       <div
         className={
           "text-red-400 font-bold select-none pointer-events-none whitespace-nowrap"
@@ -23,7 +22,7 @@ export function Footer({ url }: { url?: string }) {
           Credits for the photo.
         </div>
       </a>
-      {url && (
+      {/* {url && (
         <>
           <span>🔥</span>
           <Link href={url}>
@@ -32,7 +31,7 @@ export function Footer({ url }: { url?: string }) {
             </span>
           </Link>
         </>
-      )}
+      )}*/}
     </footer>
   );
 }

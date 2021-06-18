@@ -1,6 +1,6 @@
-import Link from "next/link";
 import React from "react";
-import Title from "./title";
+import { Title } from "./title";
+import ServiceCard from "./serviceCard";
 
 export function Services() {
   return (
@@ -15,36 +15,18 @@ export function Services() {
           "flex flex-col md:flex-row flex-wrap items-stretch justify-center md:text-center"
         }
       >
-        <div className="cursor-pointer p-0 md:p-8 m-1 md:m-4 md:w-1/3 rounded md:bg-black text-white md:bg-opacity-30 flex items-center justify-center">
-          <Link href={"#a"}>
-            <Title>
-              ✅️ We create websites for companies (institutional, promotional)
-              and individuals (resume, blog)
-            </Title>
-          </Link>
-        </div>
-        <div className="cursor-pointer p-0 md:p-8 m-1 md:m-4 md:w-1/3 rounded md:bg-black text-white md:bg-opacity-30 flex items-center justify-center ">
-          <Link href={"#a"}>
-            <Title>
-              ✅️ Start selling online: personalized e-commerce based on Stripe
-              or Wordpress
-            </Title>
-          </Link>
-        </div>
-        <div className="cursor-pointer p-0 md:p-8 m-1 md:m-4 md:w-1/3 rounded md:bg-black text-white md:bg-opacity-30 flex items-center justify-center ">
-          <Link href={"#a"}>
-            <Title>
-              ✅️ We offer custom domain and email for you or your business
-            </Title>
-          </Link>
-        </div>
-        <div className="cursor-pointer p-0 md:p-8 m-1 md:m-4 md:w-1/3 rounded md:bg-black text-white md:bg-opacity-30 flex items-center justify-center ">
-          <Link href={"#a"}>
-            <Title>
-              ✅️ We create iPhone, iPad and Android apps to suit your needs
-            </Title>
-          </Link>
-        </div>
+        <ServiceCard color={"mediumvioletred"}>
+          Creation of institutional and promotional web sites
+        </ServiceCard>
+        <ServiceCard color={"yellowgreen"}>
+          E-Commerce platform: start selling online
+        </ServiceCard>
+        <ServiceCard color={"tomato"}>
+          Custom domain and email for personalized interaction
+        </ServiceCard>
+        <ServiceCard color={"deepskyblue"}>
+          Mobile apps (iPhone, iPad and Android) development on-demand
+        </ServiceCard>
       </div>
     </div>
   );
