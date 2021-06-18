@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export function Footer({ url }: { url?: string }) {
@@ -8,7 +9,7 @@ export function Footer({ url }: { url?: string }) {
           "text-red-400 font-bold select-none pointer-events-none whitespace-nowrap"
         }
       >
-        Proudly made in Canada 🇨🇦 in 2021
+        Made in 🇨🇦
       </div>
       <a
         target="_blank"
@@ -22,7 +23,7 @@ export function Footer({ url }: { url?: string }) {
           Credits for the photo.
         </div>
       </a>
-      {/* {url && (
+      {url && (
         <>
           <span>🔥</span>
           <Link href={url}>
@@ -31,7 +32,7 @@ export function Footer({ url }: { url?: string }) {
             </span>
           </Link>
         </>
-      )}*/}
+      )}
     </footer>
   );
 }
