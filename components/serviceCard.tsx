@@ -3,24 +3,24 @@ import React, { ReactNode } from "react";
 import { Body } from "./title";
 
 function getMatchingColor(color: string) {
-  /* switch (color) {
+  switch (color) {
     case "mediumvioletred": {
       return "text-white";
     }
     case "yellowgreen": {
-      return "text-white";
+      return "darkslateblue";
     }
     case "tomato": {
       return "text-white";
     }
     case "deepskyblue": {
-      return "text-white";
+      return "midnightblue";
     }
     default: {
       return "text-white";
     }
-  }*/
-  return "text-white";
+  }
+  // return "text-white";
 }
 
 const ServiceCard = ({
@@ -33,15 +33,16 @@ const ServiceCard = ({
   return (
     <div
       className="cursor-pointer p-4 md:p-8 my-3 md:m-8 md:w-1/3 rounded-xl text-white md:bg-black md:bg-opacity-30 flex items-center justify-center shadow-xl border border-white"
-      style={color ? { backgroundColor: color } : {}}
+      style={
+        color ? { backgroundColor: color, color: getMatchingColor(color) } : {}
+      }
     >
       <Link href={"#a"}>
         <Body
           icon={
             <i
-              className={`far fa-check-circle text-6xl pr-2 ${
-                color && getMatchingColor(color)
-              }`}
+              className={`far fa-check-circle text-6xl pr-2`}
+              style={color ? { color: getMatchingColor(color) } : {}}
             />
           }
         >

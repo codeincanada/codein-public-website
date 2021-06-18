@@ -29,7 +29,7 @@ export function Body({
       {children}
     </p>
   ) : (
-    <span className="text-md md:text-lg lg:text-xl flex nowrap flex items-center">
+    <span className="text-md md:text-lg lg:text-xl flex nowrap flex-1 items-center">
       {icon ? icon : null}
       {children}
     </span>

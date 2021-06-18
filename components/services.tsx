@@ -12,7 +12,7 @@ export function Services() {
       <Title isTopLevel>💡Services we offer:</Title>
       <div
         className={
-          "flex flex-col md:flex-row flex-wrap items-stretch justify-center md:text-center"
+          "flex flex-col md:flex-row flex-wrap items-stretch justify-center"
         }
       >
         <ServiceCard color={"mediumvioletred"}>
