@@ -13,13 +13,8 @@ const Sidebar = ({
   socialMediaLinks?: ReactNode;
   footer?: ReactNode;
 }) => {
-  const collapsedClassesForBody = "display-none text-white";
-  const expandedClassesForBody =
-    "md:rounded-xl text-gray-300 bg-opacity-10 hover:bg-opacity-50 bg-black hover:bg-black border border-red-500";
   return (
-    <aside
-      className={isCollapsed ? collapsedClassesForBody : expandedClassesForBody}
-    >
+    <aside>
       {!isCollapsed && (
         <div>
           {topSection && <section className={"mb-6"}>{topSection}</section>}

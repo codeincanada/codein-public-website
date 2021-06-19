@@ -4,7 +4,7 @@ import React from "react";
 export function ArticleList() {
   return (
     <section>
-      <h2 className={"text-4xl underline font-serif"}>Posts and links:</h2>
+      <h2>Posts and links:</h2>
       <ol>
         <ListItemCA>
           <a

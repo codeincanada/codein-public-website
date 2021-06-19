@@ -21,7 +21,7 @@ export function TextBody({
 }) {
   return expandedText ? (
     <details>
-      <summary className={"flex"}>
+      <summary>
         {icon ? icon : null}
         <span
           className={
@@ -31,8 +31,8 @@ export function TextBody({
           {children}
         </span>
         <a>
-          <span className={"hidden lg:inline lg:px-2"}>Contact us</span>
-          <i className={`far fa-phone text-md`} />
+          <span>Contact us</span>
+          <i className="far fa-phone text-md" />
           /&nbsp;
           <i className="far fa-envelope" />
         </a>

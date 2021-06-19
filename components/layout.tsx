@@ -29,9 +29,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <Header />
 
-      <main className={"flex-1 flex flex-col md:container m-auto"}>
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 }
