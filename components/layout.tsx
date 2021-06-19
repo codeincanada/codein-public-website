@@ -2,15 +2,13 @@ import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import { Header } from "./header";
 
-// https://tailwindcss.com/docs/guides/nextjs
-
 export default function Layout({ children }: { children: ReactNode }) {
   const [url] = useState(() =>
     typeof window !== "undefined" ? window.location.hostname : ""
   );
 
   return (
-    <div className="subpixel-antialiased transition duration-200 ease-out m-auto w-screen h-screen flex flex-col">
+    <div>
       <Head>
         <meta name="referrer" content="origin" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />

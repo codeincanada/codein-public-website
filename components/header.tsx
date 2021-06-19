@@ -1,13 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { Title } from "./title";
+import { TextTitle } from "./textComponents";
 
 export function Header() {
   return (
-    <header
-      className="w-full m-auto flex text-black p-2 shadow-lg"
-      style={{ backgroundColor: "whitesmoke" }}
-    >
+    <header style={{ backgroundColor: "whitesmoke" }}>
       <nav
         className={
           "flex flex-1 justify-between items-center md:container md:m-auto"
@@ -19,9 +16,9 @@ export function Header() {
           }
         >
           <Link href={"/posts/second-post"}>
-            <Title>
+            <TextTitle>
               Blog <i className="fas fa-pencil-alt" />
-            </Title>
+            </TextTitle>
           </Link>
         </span>
 
@@ -32,36 +29,36 @@ export function Header() {
             "https://join.slack.com/t/dieppe-ca/shared_invite/zt-rweiadad-D_2MIdIggWyoQOIRzX5fnw"
           }
         >
-          <Title>
+          <TextTitle>
             <i className="fab fa-slack" />
-            <span className="hidden md:inline pl-2">Slack</span>
-          </Title>
+            <span>Slack</span>
+          </TextTitle>
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href={"https://ca.linkedin.com/in/brasileiro"}
         >
-          <Title>
+          <TextTitle>
             <i className="fab fa-linkedin" />
-            <span className="hidden md:inline pl-2">LinkedIn</span>
-          </Title>
+            <span>LinkedIn</span>
+          </TextTitle>
         </a>
         <a target="_blank" rel="noreferrer" href={"https://github.com/w-b-dev"}>
-          <Title>
+          <TextTitle>
             <i className="fab fa-github" />
-            <span className="hidden md:inline pl-2">Github</span>
-          </Title>
+            <span>Github</span>
+          </TextTitle>
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href={"https://mobile.twitter.com/brasileiro_ca"}
         >
-          <Title>
+          <TextTitle>
             <i className="fab fa-twitter" />
-            <span className="hidden md:inline pl-2">Twitter</span>
-          </Title>
+            <span>Twitter</span>
+          </TextTitle>
         </a>
       </nav>
     </header>

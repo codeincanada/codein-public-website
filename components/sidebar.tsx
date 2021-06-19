@@ -21,7 +21,7 @@ const Sidebar = ({
       className={isCollapsed ? collapsedClassesForBody : expandedClassesForBody}
     >
       {!isCollapsed && (
-        <div className="p-10">
+        <div>
           {topSection && <section className={"mb-6"}>{topSection}</section>}
           {bottomSection && <section>{bottomSection}</section>}
           {socialMediaLinks && <section>{socialMediaLinks}</section>}

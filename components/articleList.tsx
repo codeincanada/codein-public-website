@@ -3,9 +3,9 @@ import React from "react";
 
 export function ArticleList() {
   return (
-    <section className="border-t-2 border-red-500 border-opacity-50 pt-4">
+    <section>
       <h2 className={"text-4xl underline font-serif"}>Posts and links:</h2>
-      <ol className="md:list-decimal list-inside leading-loose">
+      <ol>
         <ListItemCA>
           <a
             href={"https://twitter.com/iamakulov/status/1385230664648253443"}

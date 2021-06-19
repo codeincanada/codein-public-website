@@ -1,6 +1,5 @@
 import { AppProps } from "next/app";
 import "../styles/global.css";
-import "tailwindcss/tailwind.css";
 import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import { useEffect } from "react";

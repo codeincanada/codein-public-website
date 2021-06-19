@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { ReactNode } from "react";
-import { Body } from "./title";
+import { TextBody } from "./textComponents";
 
 function getMatchingColor(color: string) {
   switch (color) {
@@ -34,7 +34,6 @@ const ServiceCard = ({
 }) => {
   return (
     <div
-      className="cursor-pointer p-4 md:p-8 my-2 mx-auto md:m-8 w-full rounded-xl text-white flex items-center justify-center shadow-xl border border-white"
       style={
         color
           ? {
@@ -47,7 +46,7 @@ const ServiceCard = ({
       }
     >
       <Link href={"#a"}>
-        <Body
+        <TextBody
           expandedText={expandedText}
           icon={
             <i
@@ -57,7 +56,7 @@ const ServiceCard = ({
           }
         >
           {children}
-        </Body>
+        </TextBody>
       </Link>
     </div>
   );

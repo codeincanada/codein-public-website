@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Layout from "../../components/layout";
-import { Title } from "../../components/title";
+import { TextTitle } from "../../components/textComponents";
 
 export default function FirstPost() {
   return (
@@ -11,7 +11,7 @@ export default function FirstPost() {
       </Head>
 
       <main>
-        <Title isTopLevel>First Post</Title>
+        <TextTitle isTopLevel>First Post</TextTitle>
         <Image
           src={"/images/profile-pic.jpeg"}
           width={200}
