@@ -48,8 +48,12 @@ const ServiceCard = ({
       <Link href={"#a"}>
         <TextBody
           expandedText={expandedText}
-          className="far fa-check-circle"
-          icon={<i style={color ? { color: getMatchingColor(color) } : {}} />}
+          icon={
+            <i
+              className="far fa-check-circle"
+              style={color ? { color: getMatchingColor(color) } : {}}
+            />
+          }
         >
           {children}
         </TextBody>
