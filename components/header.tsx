@@ -15,7 +15,7 @@ export function Header() {
       >
         <span
           className={
-            "bg-red-400 bg-opacity-70 hover:bg-opacity-90 text-white hover:text-white px-4 py-1 shadow hover:shadow-xl rounded-sm cursor-pointer"
+            "bg-red-900 hover:bg-red-500 text-gray-100 hover:text-white px-4 py-1 shadow hover:shadow-xl rounded-sm cursor-pointer"
           }
         >
           <Link href={"/posts/second-post"}>
@@ -28,8 +28,9 @@ export function Header() {
         <a
           target="_blank"
           rel="noreferrer"
-          href={"https://dieppe-ca.slack.com/"}
-          className="hover:text-white"
+          href={
+            "https://join.slack.com/t/dieppe-ca/shared_invite/zt-rweiadad-D_2MIdIggWyoQOIRzX5fnw"
+          }
         >
           <Title>
             <i className="fab fa-slack" />
@@ -40,19 +41,13 @@ export function Header() {
           target="_blank"
           rel="noreferrer"
           href={"https://ca.linkedin.com/in/brasileiro"}
-          className="hover:text-white"
         >
           <Title>
             <i className="fab fa-linkedin" />
             <span className="hidden md:inline pl-2">LinkedIn</span>
           </Title>
         </a>
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href={"https://github.com/w-b-dev"}
-          className="hover:text-white"
-        >
+        <a target="_blank" rel="noreferrer" href={"https://github.com/w-b-dev"}>
           <Title>
             <i className="fab fa-github" />
             <span className="hidden md:inline pl-2">Github</span>
@@ -62,7 +57,6 @@ export function Header() {
           target="_blank"
           rel="noreferrer"
           href={"https://mobile.twitter.com/brasileiro_ca"}
-          className="hover:text-white"
         >
           <Title>
             <i className="fab fa-twitter" />

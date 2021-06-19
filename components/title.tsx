@@ -16,18 +16,21 @@ export function Title({
 
 export function Body({
   children,
-  isParagraph = false,
+  expandedText,
   icon,
 }: {
   children: ReactNode;
-  isParagraph?: boolean;
+  expandedText?: string;
   icon?: ReactNode;
 }) {
-  return isParagraph ? (
-    <p className="text-md">
-      {icon ? icon : null}
-      {children}
-    </p>
+  return expandedText ? (
+    <details className="text-md md:text-lg lg:text-xl flex nowrap flex-1 items-center">
+      {expandedText}
+      <summary>
+        {icon ? icon : null}
+        {children}
+      </summary>
+    </details>
   ) : (
     <span className="text-md md:text-lg lg:text-xl flex nowrap flex-1 items-center">
       {icon ? icon : null}
