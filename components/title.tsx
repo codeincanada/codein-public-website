@@ -24,12 +24,24 @@ export function Body({
   icon?: ReactNode;
 }) {
   return expandedText ? (
-    <details className="text-md md:text-lg lg:text-xl flex nowrap flex-1 items-center">
-      {expandedText}
-      <summary>
+    <details className="text-md md:text-lg lg:text-xl flex flex-1">
+      <summary className={"flex"}>
         {icon ? icon : null}
-        {children}
+        <span
+          className={
+            "text-xl md:text-2xl lg:text-3xl flex-1 flex items-center md:justify-center"
+          }
+        >
+          {children}
+        </span>
+        <a className="flex items-center border-2 border-black bg-red-900 p-2 radius">
+          <span className={"hidden lg:inline lg:px-2"}>Contact us</span>
+          <i className={`far fa-phone text-md`} />
+          /&nbsp;
+          <i className="far fa-envelope text-md" />
+        </a>
       </summary>
+      <span className={"p-2 mt-2 border-t-2"}>{expandedText}</span>
     </details>
   ) : (
     <span className="text-md md:text-lg lg:text-xl flex nowrap flex-1 items-center">

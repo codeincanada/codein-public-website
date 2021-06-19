@@ -34,14 +34,14 @@ const ServiceCard = ({
 }) => {
   return (
     <div
-      className="cursor-pointer p-4 md:p-8 my-2 mx-auto md:m-8 w-80 md:w-50 rounded-xl text-white md:bg-black md:bg-opacity-30 flex items-center justify-center shadow-xl border border-white"
+      className="cursor-pointer p-4 md:p-8 my-2 mx-auto md:m-8 w-full rounded-xl text-white flex items-center justify-center shadow-xl border border-white"
       style={
         color
           ? {
               backgroundColor: color,
               color: getMatchingColor(color),
               fontWeight: "bold",
-              textShadow: "1px 2px rgba(0, 0, 0, 0.5)",
+              textShadow: "1px 1px rgba(0, 0, 0, 0.5)",
             }
           : {}
       }
