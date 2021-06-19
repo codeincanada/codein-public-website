@@ -37,7 +37,7 @@ export function TextBody({
           <i className="far fa-envelope" />
         </a>
       </summary>
-      <span className={"p-2 mt-2 border-t-2"}>{expandedText}</span>
+      <span>{expandedText}</span>
     </details>
   ) : (
     <span>

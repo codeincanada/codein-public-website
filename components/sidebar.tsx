@@ -17,7 +17,7 @@ const Sidebar = ({
     <aside>
       {!isCollapsed && (
         <div>
-          {topSection && <section className={"mb-6"}>{topSection}</section>}
+          {topSection && <section>{topSection}</section>}
           {bottomSection && <section>{bottomSection}</section>}
           {socialMediaLinks && <section>{socialMediaLinks}</section>}
           {footer && <section>{footer}</section>}
