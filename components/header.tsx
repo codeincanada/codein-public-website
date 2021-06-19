@@ -1,27 +1,33 @@
 import React from "react";
 import Link from "next/link";
-import { TextTitle } from "./textComponents";
+import { Box, Link as LinkMUI } from "@material-ui/core";
+import theme from "../styles/theme";
 
 export function Header() {
   return (
-    <header style={{ backgroundColor: "whitesmoke" }}>
-      <nav
-        className={
-          "flex flex-1 justify-between items-center md:container md:m-auto"
-        }
-      >
-        <span
-          className={
-            "bg-red-900 hover:bg-red-500 text-gray-100 hover:text-white px-4 py-1 shadow hover:shadow-xl rounded-sm cursor-pointer"
-          }
-        >
-          <Link href={"/posts/second-post"}>
-            <TextTitle>
-              Blog <i className="fas fa-pencil-alt" />
-            </TextTitle>
-          </Link>
-        </span>
+    <Box
+      component="nav"
+      display="flex"
+      alignItems="center"
+      justifyContent="space-between"
+      padding={theme.spacing()}
+    >
+      <Link href={"/"}>
+        <LinkMUI>
+          <>
+            <i className="fas fa-home" />
+            Home
+          </>
+        </LinkMUI>
+      </Link>
 
+      <Link href={"/posts"}>
+        <LinkMUI>
+          <i className="fas fa-pencil-alt" />
+          Blog
+        </LinkMUI>
+      </Link>
+      <LinkMUI>
         <a
           target="_blank"
           rel="noreferrer"
@@ -29,38 +35,36 @@ export function Header() {
             "https://join.slack.com/t/dieppe-ca/shared_invite/zt-rweiadad-D_2MIdIggWyoQOIRzX5fnw"
           }
         >
-          <TextTitle>
-            <i className="fab fa-slack" />
-            <span>Slack</span>
-          </TextTitle>
+          <i className="fab fa-slack" />
+          <span>Slack</span>
         </a>
+      </LinkMUI>
+      <LinkMUI>
         <a
           target="_blank"
           rel="noreferrer"
           href={"https://ca.linkedin.com/in/brasileiro"}
         >
-          <TextTitle>
-            <i className="fab fa-linkedin" />
-            <span>LinkedIn</span>
-          </TextTitle>
+          <i className="fab fa-linkedin" />
+          <span>LinkedIn</span>
         </a>
+      </LinkMUI>
+      <LinkMUI>
         <a target="_blank" rel="noreferrer" href={"https://github.com/w-b-dev"}>
-          <TextTitle>
-            <i className="fab fa-github" />
-            <span>Github</span>
-          </TextTitle>
+          <i className="fab fa-github" />
+          <span>Github</span>
         </a>
+      </LinkMUI>
+      <LinkMUI>
         <a
           target="_blank"
           rel="noreferrer"
           href={"https://mobile.twitter.com/brasileiro_ca"}
         >
-          <TextTitle>
-            <i className="fab fa-twitter" />
-            <span>Twitter</span>
-          </TextTitle>
+          <i className="fab fa-twitter" />
+          <span>Twitter</span>
         </a>
-      </nav>
-    </header>
+      </LinkMUI>
+    </Box>
   );
 }
