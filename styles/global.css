@@ -1,4 +1,4 @@
-body {
+main {
   /*font-family: "Open Sans", sans-serif;*/
   background: #151426; /*https://thegraph.com/*/
   /*MOVING THIS BLOCK TO LEVERAGE THE IMG COMPONENT*/
@@ -8,4 +8,9 @@ body {
   background-blend-mode: overlay;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+a,
+a:visited {
+  color: tomato;
 }

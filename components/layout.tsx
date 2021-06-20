@@ -33,7 +33,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Header />
       </Box>
 
-      <Box component="main" flex="1">
+      <Box
+        component="main"
+        flex="1"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         {children}
       </Box>
 

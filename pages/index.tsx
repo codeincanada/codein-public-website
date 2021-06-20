@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import { Services } from "../components/services";
+import ArticleList from "../components/articleList";
 
 export default function Home() {
   /* const [url, setUrl] = useState("");
@@ -8,7 +8,7 @@ export default function Home() {
   }, []);*/
   return (
     <Layout>
-      <Services />
+      <ArticleList />
     </Layout>
   );
 }
