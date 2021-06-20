@@ -1,8 +1,8 @@
 import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import { Header } from "./header";
-
-// https://tailwindcss.com/docs/guides/nextjs
+import { Footer } from "./footer";
+import { Box } from "@material-ui/core";
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [url] = useState(() =>
@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   );
 
   return (
-    <div className="subpixel-antialiased transition duration-200 ease-out m-auto w-screen h-screen flex flex-col">
+    <Box display="flex" flexDirection="column" height="100vh">
       <Head>
         <meta name="referrer" content="origin" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,11 +29,23 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>{url}</title>
       </Head>
 
-      <Header />
+      <Box component="header">
+        <Header />
+      </Box>
 
-      <main className={"flex-1 flex flex-col md:container m-auto"}>
+      <Box
+        component="main"
+        flex="1"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         {children}
-      </main>
-    </div>
+      </Box>
+
+      <Box component="footer">
+        <Footer />
+      </Box>
+    </Box>
   );
 }

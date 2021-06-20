@@ -1,9 +1,15 @@
 import React from "react";
+import { Box, Typography } from "@material-ui/core";
 
-export function Footer({ url }: { url?: string }) {
+export function Footer() {
   return (
-    <footer className="text-white text-xs font-bold text-center">
-      Made in 🇨🇦 with <i className="fas fa-heart text-red-700" />
-    </footer>
+    <Box textAlign="center">
+      <Typography color="primary" variant="body1">
+        Made in 🇨🇦 with
+        <Typography color="secondary" variant="body1">
+          <i className="fas fa-heart" />
+        </Typography>
+      </Typography>
+    </Box>
   );
 }

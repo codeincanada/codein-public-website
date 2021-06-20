@@ -1,7 +1,6 @@
-import Image from "next/image";
 import Head from "next/head";
 import Layout from "../../components/layout";
-import { Title } from "../../components/title";
+import ProTip from "../../components/proTip";
 
 export default function FirstPost() {
   return (
@@ -10,15 +9,7 @@ export default function FirstPost() {
         <title>I am a post</title>
       </Head>
 
-      <main>
-        <Title isTopLevel>First Post</Title>
-        <Image
-          src={"/images/profile-pic.jpeg"}
-          width={200}
-          height={200}
-          alt="LinkedIn default photo"
-        />
-      </main>
+      <ProTip />
     </Layout>
   );
 }

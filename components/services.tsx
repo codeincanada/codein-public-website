@@ -3,7 +3,7 @@ import ServiceCard from "./serviceCard";
 
 export function Services() {
   return (
-    <div className={"flex md:flex-row flex-wrap justify-center px-1"}>
+    <div>
       <ServiceCard
         color={"mediumvioletred"}
         expandedText={"Creation of institutional and promotional web sites"}
