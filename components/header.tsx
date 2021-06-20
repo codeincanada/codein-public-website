@@ -11,6 +11,7 @@ export function Header() {
       alignItems="center"
       justifyContent="space-between"
       padding={theme.spacing()}
+      textAlign="center"
     >
       <Link href={"/"}>
         <LinkMUI>

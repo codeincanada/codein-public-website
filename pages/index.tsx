@@ -1,5 +1,4 @@
 import Layout from "../components/layout";
-import { Footer } from "../components/footer";
 import { Services } from "../components/services";
 
 export default function Home() {
@@ -9,12 +8,7 @@ export default function Home() {
   }, []);*/
   return (
     <Layout>
-      <section>
-        <section>
-          <Services />
-        </section>
-        <Footer />
-      </section>
+      <Services />
     </Layout>
   );
 }
