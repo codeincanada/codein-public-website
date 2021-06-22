@@ -1,16 +1,13 @@
-main {
+body {
+  margin: 0;
   /*font-family: "Open Sans", sans-serif;*/
   background: #151426; /*https://thegraph.com/*/
   /*MOVING THIS BLOCK TO LEVERAGE THE IMG COMPONENT*/
   background-image: url("/images/willian-justen-de-vasconcellos-pUGRSh9dS9M-unsplash.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-blend-mode: overlay;
+  background-blend-mode: luminosity;
+  /*background-blend-mode: overlay;*/
   background-position: center;
   background-repeat: no-repeat;
-}
-
-a,
-a:visited {
-  color: tomato;
 }

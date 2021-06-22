@@ -1,14 +1,21 @@
 import Layout from "../components/layout";
-import ArticleList from "../components/articleList";
+import { Box, Typography } from "@material-ui/core";
 
 export default function Home() {
-  /* const [url, setUrl] = useState("");
-  useEffect(() => {
-    setUrl(window?.location.hostname);
-  }, []);*/
   return (
     <Layout>
-      <ArticleList />
+      <Typography color="secondary" variant="h1">
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          bgcolor={"tomato"}
+          maxHeight={"0.5em"}
+          maxWidth={"1.1em"}
+        >
+          <i className="fas fa-battery-empty" />
+        </Box>
+      </Typography>
     </Layout>
   );
 }

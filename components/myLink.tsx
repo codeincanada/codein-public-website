@@ -16,7 +16,7 @@ function MyLink(props: any) {
         component={component}
         {...other}
       >
-        <Typography>
+        <Typography color="primary">
           <Box
             component={"span"}
             display={"inline-block"}
