@@ -3,7 +3,7 @@ import "../styles/global.css";
 import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core";
 import theme from "../styles/theme";
 import Head from "next/head";
 /* Global imports should be here -- not in the Layout partial */
@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
+        {/* <CssBaseline />*/}
         <Component {...pageProps} />
       </ThemeProvider>
     </>
