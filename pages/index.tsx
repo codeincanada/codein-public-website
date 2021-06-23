@@ -1,10 +1,10 @@
 import Layout from "../components/layout";
-import { Box, Typography } from "@material-ui/core";
+import FormWithSingleInput from "../components/FormWithSingleInput";
 
 export default function Home() {
   return (
     <Layout>
-      <Typography color="secondary" variant="h1">
+      {/* <Typography color="secondary" variant="h1">
         <Box
           display="flex"
           justifyContent="center"
@@ -15,7 +15,8 @@ export default function Home() {
         >
           <i className="fas fa-battery-empty" />
         </Box>
-      </Typography>
+      </Typography>*/}
+      <FormWithSingleInput />
     </Layout>
   );
 }
