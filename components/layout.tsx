@@ -37,6 +37,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         component="main"
         flex="1"
         display="flex"
+        flexDirection="column"
         justifyContent="center"
         alignItems="center"
       >

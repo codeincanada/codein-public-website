@@ -9,6 +9,14 @@ import {
 export function Footer() {
   return (
     <>
+      <Box textAlign="center">
+        <Typography color="secondary" variant="body1" noWrap>
+          Made in 🇨🇦 with
+          <Typography component="span">
+            <i className="fas fa-heart" />
+          </Typography>
+        </Typography>
+      </Box>
       <BottomNavigation>
         <BottomNavigationAction
           label="Favorites"
@@ -23,14 +31,6 @@ export function Footer() {
           icon={<i className="fas fa-trash-alt" />}
         />
       </BottomNavigation>
-      <Box textAlign="center" bgcolor="black" padding="1em 0">
-        <Typography color="primary" variant="body1" noWrap>
-          Made in 🇨🇦 with
-          <Typography color="secondary" component="span">
-            <i className="fas fa-heart" />
-          </Typography>
-        </Typography>
-      </Box>
     </>
   );
 }
