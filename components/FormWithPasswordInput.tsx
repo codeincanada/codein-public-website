@@ -4,7 +4,7 @@ import {
   InputAdornment,
   InputLabel,
 } from "@material-ui/core";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -28,9 +28,13 @@ function AvatarIcon() {
 
 const FormWithSingleInput = () => {
   const classes = useStyles();
+  const [hasError, setHasError] = useState(false);
+  useEffect(() => {
+    setHasError(true);
+  }, []);
   return (
     <div className={classes.root}>
-      <FormControl className={classes.margin}>
+      <FormControl error={hasError} className={classes.margin}>
         <InputLabel htmlFor="input-with-icon-adornment">
           Enter your email
         </InputLabel>
@@ -43,28 +47,6 @@ const FormWithSingleInput = () => {
           }
         />
       </FormControl>
-      {/* <TextField
-        className={classes.margin}
-        id="input-with-icon-textfield"
-        label="TextField"
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <AvatarIcon />
-            </InputAdornment>
-          ),
-        }}
-      />
-      <div className={classes.margin}>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <AvatarIcon />
-          </Grid>
-          <Grid item>
-            <TextField id="input-with-icon-grid" label="With a grid" />
-          </Grid>
-        </Grid>
-      </div>*/}
     </div>
   );
 };
