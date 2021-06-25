@@ -1,20 +1,14 @@
-import {
-  FormControl,
-  Input,
-  InputAdornment,
-  InputLabel,
-} from "@material-ui/core";
+import { InputAdornment, TextField } from "@material-ui/core";
 import React, { ChangeEvent, FocusEvent, useEffect, useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: "rgba(255,255,255, 0.75)",
-    margingTop: theme.spacing(3),
+    backgroundColor: "rgba(255,255,255, 0.8)",
     padding: theme.spacing(4),
     borderRadius: theme.spacing(2),
     "&:hover": {
-      backgroundColor: "rgba(255,255,255, 0.95)",
+      backgroundColor: "rgba(255,255,255, 1)",
     },
   },
   margin: {
@@ -66,21 +60,24 @@ const FormWithEmailInput = () => {
 
   return (
     <div className={classes.root}>
-      <FormControl error={hasError} className={classes.margin}>
-        <InputLabel htmlFor="input-with-icon-adornment">
-          {errorMessages.length > 0 ? errorMessages[0] : ERRORS.INITIAL_STATE}
-        </InputLabel>
-        <Input
-          id="input-avatar"
-          startAdornment={
+      <TextField
+        InputProps={{
+          startAdornment: (
             <InputAdornment position="start">
               <AvatarIcon />
             </InputAdornment>
-          }
-          onChange={handleOnChange}
-          onBlur={handleOnBlur}
-        />
-      </FormControl>
+          ),
+        }}
+        onChange={handleOnChange}
+        onBlur={handleOnBlur}
+        error={hasError}
+        type="email"
+        id="input-avatar"
+        // variant="filled" // preferred if no icon a.k.a. InputAdornment
+        label={
+          errorMessages.length > 0 ? errorMessages[0] : ERRORS.INITIAL_STATE
+        }
+      />
     </div>
   );
 };
