@@ -11,7 +11,7 @@ export function Footer() {
     <>
       <Box textAlign="center">
         <Typography color="secondary" variant="body1" noWrap>
-          Made in 🇨🇦 with
+          Made in 🇨🇦 with{" "}
           <Typography component="span">
             <i className="fas fa-heart" />
           </Typography>
