@@ -1,8 +1,14 @@
-# Next.js
+# Playground
 
-## highlights
+The goal here is to use this area as a safe place to try new technologies.
 
-- tailwind
+## Current focus:
+
+- Split.io integration (Feature Flags)
+
+## Main points
+
+- MATERIAL UI
 - typescript
 - eslint and prettier on every commit
 - web manifest
