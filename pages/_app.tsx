@@ -9,7 +9,7 @@ import theme from "../styles/theme";
 import Head from "next/head";
 import { SplitFactory } from "@splitsoftware/splitio-react";
 /* Global imports should be here -- not in the Layout partial */
-const isProduction =
+export const isProduction =
   process.env.NODE_ENV === "production" ||
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 

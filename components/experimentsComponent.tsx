@@ -4,6 +4,7 @@ import { Box, Typography } from "@material-ui/core";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
 import { TreatmentWithConfig } from "@splitsoftware/splitio-react/types/splitio/splitio";
+import { isProduction } from "../pages/_app";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -66,7 +67,7 @@ function PlaceholderComponent({
   variant: string;
 }) {
   const classes = useStyles();
-  return (
+  return isProduction ? null : (
     <Box className={classes.tempResult}>
       <Typography
         classes={{
