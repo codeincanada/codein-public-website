@@ -10,7 +10,7 @@ export function Header() {
         component="nav"
         display="flex"
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="space-around"
         padding={theme.spacing()}
         textAlign="center"
         bgcolor={"#fff"}
