@@ -36,6 +36,10 @@ export default function App({ Component, pageProps }: AppProps) {
   const splitConfig = {
     core: {
       authorizationKey: "1uhc1hs0805h9q8er62smamhpvoo0br6a8dc",
+      key: "foo",
+    },
+    storage: {
+      type: "LOCALSTORAGE",
     },
   };
 
