@@ -14,13 +14,8 @@ export const EXPERIMENTS = {
 export default function Home() {
   return (
     <Layout>
-      <FormWithEmailInput />
-      <Grid
-        container
-        alignContent={"space-around"}
-        justify={"space-around"}
-        sm={8}
-      >
+      <Grid container direction={"column-reverse"} alignItems={"center"}>
+        <FormWithEmailInput />
         <TimeComponent />
         <DateComponent />
       </Grid>
