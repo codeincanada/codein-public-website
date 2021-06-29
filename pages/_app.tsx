@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
       key: isProduction ? "foo" : "bar",
     },
     storage: {
-      type: isProduction ? "LOCALSTORAGE" : "MEMORY",
+      type: "LOCALSTORAGE",
     },
   };
 

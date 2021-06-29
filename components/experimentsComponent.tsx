@@ -82,11 +82,11 @@ function PlaceholderComponent({
 }
 
 function TimeComponent() {
-  const { isReady } = useContext(SplitContext);
+  const { isReadyFromCache, isReady } = useContext(SplitContext);
   const timeString = new Date(Date.now()).toTimeString();
   const treatments = useTreatments([EXPERIMENTS.TIME]);
   const treatmentConfig = treatments[EXPERIMENTS.TIME];
-  return isReady ? (
+  return isReadyFromCache || isReady ? (
     <FeatureFlagReady treatmentConfig={treatmentConfig}>
       {timeString}
     </FeatureFlagReady>
@@ -95,11 +95,11 @@ function TimeComponent() {
   );
 }
 function DateComponent() {
-  const { isReadyFromCache } = useContext(SplitContext);
+  const { isReadyFromCache, isReady } = useContext(SplitContext);
   const dateString = new Date(Date.now()).toDateString();
   const treatments = useTreatments([EXPERIMENTS.DATE]);
   const treatmentConfig = treatments[EXPERIMENTS.DATE];
-  return isReadyFromCache ? (
+  return isReadyFromCache || isReady ? (
     <FeatureFlagReady treatmentConfig={treatmentConfig}>
       {dateString}
     </FeatureFlagReady>
