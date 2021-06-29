@@ -1,25 +1,33 @@
 import React, { ReactNode, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Box, Typography } from "@material-ui/core";
-import { Skeleton } from "@material-ui/lab";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
 import { TreatmentWithConfig } from "@splitsoftware/splitio-react/types/splitio/splitio";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    padding: theme.spacing(10, 30),
-    border: "10px dashed gray",
-    backgroundColor: "white",
+  root: {},
+  solidResult: {
+    border: "5px solid #999",
+    backgroundColor: "#333",
+    color: "white",
+  },
+  tempResult: {
+    border: "2px dotted #f99",
+    backgroundColor: "transparent",
+    color: "white",
+  },
+  whiteText: {
+    color: "#fff",
+    fontSize: 12,
+    fontWeight: "bold",
   },
 }));
 
 const ComponentBody = ({ content }: { content?: ReactNode }) => {
   const classes = useStyles();
   return (
-    <Box className={classes.root}>
-      <Typography>{content}</Typography>
-    </Box>
+    <Typography classes={{ root: classes.solidResult }}>{content}</Typography>
   );
 };
 
@@ -33,15 +41,42 @@ function FeatureFlagReady({
   const { treatment } = treatmentConfig;
   return (
     <>
-      <h1>Split: {treatment}</h1>
       {treatment === "on" ? (
         <ComponentBody content={children} />
       ) : (
-        <Skeleton variant={"rect"} animation={false}>
-          <ComponentBody />
-        </Skeleton>
+        <PlaceholderComponent
+          variant={placeholderComponentVariants.TREATMENT_OFF}
+        >
+          {JSON.stringify(treatmentConfig)}
+        </PlaceholderComponent>
       )}
     </>
+  );
+}
+const placeholderComponentVariants = {
+  NOT_READY: "SPLIT SDK IS NOT READY",
+  TREATMENT_OFF: "THIS EXPERIMENT IS OFF",
+};
+
+function PlaceholderComponent({
+  children,
+  variant,
+}: {
+  children?: ReactNode;
+  variant: string;
+}) {
+  const classes = useStyles();
+  return (
+    <Box className={classes.tempResult}>
+      <Typography
+        classes={{
+          root: classes.whiteText,
+        }}
+      >
+        {variant}
+      </Typography>
+      <pre>{children}</pre>
+    </Box>
   );
 }
 
@@ -55,30 +90,20 @@ function TimeComponent() {
       {timeString}
     </FeatureFlagReady>
   ) : (
-    <>
-      <h1>Split not ready</h1>
-      <Skeleton variant={"rect"}>
-        <ComponentBody />
-      </Skeleton>
-    </>
+    <PlaceholderComponent variant={placeholderComponentVariants.NOT_READY} />
   );
 }
 function DateComponent() {
-  const { isReady } = useContext(SplitContext);
+  const { isReadyFromCache } = useContext(SplitContext);
   const dateString = new Date(Date.now()).toDateString();
   const treatments = useTreatments([EXPERIMENTS.DATE]);
   const treatmentConfig = treatments[EXPERIMENTS.DATE];
-  return isReady ? (
+  return isReadyFromCache ? (
     <FeatureFlagReady treatmentConfig={treatmentConfig}>
       {dateString}
     </FeatureFlagReady>
   ) : (
-    <>
-      <h1>Split not ready</h1>
-      <Skeleton variant={"rect"}>
-        <ComponentBody />
-      </Skeleton>
-    </>
+    <PlaceholderComponent variant={placeholderComponentVariants.NOT_READY} />
   );
 }
 
