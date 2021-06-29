@@ -5,12 +5,20 @@ import {
   Box,
   Typography,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const _styles = makeStyles({
+  root: {
+    backgroundImage: "linear-gradient(to top, #fff 0%, #5a687f 100%)",
+  },
+});
 
 export function Footer() {
+  const styles = _styles();
   return (
-    <>
-      <Box textAlign="center">
-        <Typography color="secondary" variant="body1" noWrap>
+    <Box className={styles.root}>
+      <Box textAlign="center" color="white">
+        <Typography variant="body1" noWrap>
           Made in 🇨🇦 with{" "}
           <Typography component="span">
             <i className="fas fa-heart" />
@@ -31,6 +39,6 @@ export function Footer() {
           icon={<i className="fas fa-trash-alt" />}
         />
       </BottomNavigation>
-    </>
+    </Box>
   );
 }
