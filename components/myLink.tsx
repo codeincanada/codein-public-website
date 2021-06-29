@@ -2,11 +2,20 @@ import React from "react";
 import NextLink from "next/link";
 import MuiLink from "@material-ui/core/Link";
 import { Box, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+  },
+});
 
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function MyLink(props: any) {
   const { href, className, innerRef, icon, text, component, ...other } = props;
+  const classes = styles();
   return (
     <NextLink href={href} passHref>
       <MuiLink
@@ -16,7 +25,12 @@ function MyLink(props: any) {
         component={component}
         {...other}
       >
-        <Typography color="primary">
+        <Typography
+          color="primary"
+          classes={{
+            root: classes.root,
+          }}
+        >
           <Box
             component={"span"}
             display={"inline-block"}
