@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { AppProps } from "next/app";
 import "../styles/global.css";
 import * as gtag from "../lib/gtag";
@@ -8,8 +9,9 @@ import theme from "../styles/theme";
 import Head from "next/head";
 import { SplitFactory } from "@splitsoftware/splitio-react";
 /* Global imports should be here -- not in the Layout partial */
-// eslint-disable-next-line no-undef
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction =
+  process.env.NODE_ENV === "production" ||
+  process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
