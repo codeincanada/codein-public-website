@@ -35,8 +35,10 @@ export default function App({ Component, pageProps }: AppProps) {
    * https://help.split.io/hc/en-us/articles/360019916211-API-keys */
   const splitConfig = {
     core: {
-      authorizationKey: "1uhc1hs0805h9q8er62smamhpvoo0br6a8dc",
-      key: "foo",
+      authorizationKey: isProduction
+        ? "2sbbs6b2r41rcqcm083r36j2ddna5i310v6u"
+        : "1uhc1hs0805h9q8er62smamhpvoo0br6a8dc",
+      key: isProduction ? "foo" : "bar",
     },
     storage: {
       type: "LOCALSTORAGE",
