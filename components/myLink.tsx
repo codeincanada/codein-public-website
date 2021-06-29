@@ -31,11 +31,7 @@ function MyLink(props: any) {
             root: classes.root,
           }}
         >
-          <Box
-            component={"span"}
-            display={"inline-block"}
-            paddingRight={{ xs: 0, sm: 2 }}
-          >
+          <Box component={"span"} display={"inline-block"}>
             {icon}
           </Box>
           <Box component={"span"} display={{ xs: "none", sm: "inline" }}>
