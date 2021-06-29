@@ -9,9 +9,9 @@ import { isProduction } from "../pages/_app";
 const useStyles = makeStyles((theme) => ({
   root: {},
   solidResult: {
-    border: "5px solid #999",
-    backgroundColor: "#333",
     color: "white",
+    fontWeight: "bold",
+    fontSize: "small",
   },
   tempResult: {
     border: "2px dotted #f99",
