@@ -11,6 +11,9 @@ import theme from "../styles/theme";
 const _styles = makeStyles({
   root: {
     backgroundImage: "linear-gradient(to top, #fff 0%, #5a687f 100%)",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    },
   },
   textRoot: {
     fontSize: "10px",

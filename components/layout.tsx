@@ -3,14 +3,27 @@ import Head from "next/head";
 import { Header } from "./header";
 import { Footer } from "./footer";
 import { Box } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import theme from "../styles/theme";
+
+const styles = makeStyles({
+  root: {
+    display: "flex",
+    height: "100vh",
+    flexDirection: "column",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
+    },
+  },
+});
 
 export default function Layout({ children }: { children: ReactNode }) {
   const [url] = useState(() =>
     typeof window !== "undefined" ? window.location.hostname : ""
   );
-
+  const classes = styles();
   return (
-    <Box display="flex" flexDirection="column" height="100vh">
+    <Box className={classes.root}>
       <Head>
         <meta name="referrer" content="origin" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -29,7 +42,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>{url}</title>
       </Head>
 
-      <Box component="header">
+      <Box component="header" display="flex">
         <Header />
       </Box>
 
