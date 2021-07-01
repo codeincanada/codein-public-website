@@ -25,12 +25,7 @@ function MyLink(props: any) {
         component={component}
         {...other}
       >
-        <Typography
-          color="primary"
-          classes={{
-            root: classes.root,
-          }}
-        >
+        <Typography classes={classes}>
           <Box component={"span"} display={"inline-block"}>
             {icon}
           </Box>

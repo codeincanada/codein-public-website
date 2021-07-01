@@ -15,6 +15,17 @@ const styles = makeStyles({
       flexDirection: "row",
     },
   },
+  header: {
+    display: "flex",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+  },
+  footer: {
+    position: "sticky",
+    bottom: 0,
+    zIndex: 1000,
+  },
 });
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -42,7 +53,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>{url}</title>
       </Head>
 
-      <Box component="header" display="flex">
+      <Box component="header" className={classes.header}>
         <Header />
       </Box>
 
@@ -57,7 +68,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         {children}
       </Box>
 
-      <Box component="footer">
+      <Box component="footer" className={classes.footer}>
         <Footer />
       </Box>
     </Box>

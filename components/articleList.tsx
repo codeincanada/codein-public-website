@@ -1,22 +1,27 @@
 import React from "react";
 import { Link, List, ListItem, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import theme from "../styles/theme";
 
-const useStyles = makeStyles({
+const styles = makeStyles({
   root: {
-    backgroundColor: "#000000d1",
+    color: "white",
+    borderLeft: "5px solid transparent",
     "&:hover": {
-      backgroundColor: "#00000094",
+      backgroundColor: "#3333336e",
+      borderColor: "crimson",
     },
+  },
+  listRoot: {
+    paddingBottom: theme.spacing(4),
   },
 });
 
 export function ArticleList() {
-  const classes = {
-    root: useStyles().root,
-  };
+  const classes = styles();
+
   return (
-    <List>
+    <List className={classes.listRoot}>
       <ListItem
         classes={classes}
         component={Link}
@@ -24,7 +29,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Memo and Context issues</Typography>
+        <Typography>Memo and Context issues</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -33,7 +38,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">useEffect as a pro</Typography>
+        <Typography>useEffect as a pro</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -44,7 +49,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">useState Lazy Initialization</Typography>
+        <Typography>useState Lazy Initialization</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -55,9 +60,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">
-          React➕️Typescript best practices
-        </Typography>
+        <Typography>React➕️Typescript best practices</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -66,7 +69,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">
+        <Typography>
           An extensive guide on how to fetch data with Hooks
         </Typography>
       </ListItem>
@@ -77,7 +80,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Optimize your React app</Typography>
+        <Typography>Optimize your React app</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -86,7 +89,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Tailwind docs 📌</Typography>
+        <Typography>Tailwind docs 📌</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -95,9 +98,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">
-          How to incrementally start using Next.js
-        </Typography>
+        <Typography>How to incrementally start using Next.js</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -106,7 +107,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Node.js official docs</Typography>
+        <Typography>Node.js official docs</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -117,7 +118,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Cassandra with Node (Azure)</Typography>
+        <Typography>Cassandra with Node (Azure)</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -126,7 +127,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography color="secondary">Composition with React ✅</Typography>
+        <Typography>Composition with React ✅</Typography>
       </ListItem>
     </List>
   );

@@ -6,7 +6,7 @@ export default function FirstPost() {
   return (
     <Layout>
       <Head>
-        <title>Posts</title>
+        <title>Blog</title>
       </Head>
 
       <ArticleList />
