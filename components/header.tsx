@@ -1,22 +1,33 @@
 import React from "react";
-import { Box, useMediaQuery } from "@material-ui/core";
+import { Box } from "@material-ui/core";
 import theme from "../styles/theme";
 import MyLink from "./myLink";
+import { makeStyles } from "@material-ui/core/styles";
+
+const styles = makeStyles({
+  headerRoot: {
+    overflow: "auto",
+    maxHeight: "100vh",
+    display: "flex",
+    flex: "1",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: theme.spacing(),
+    textAlign: "center",
+    backgroundColor: "white",
+    flexDirection: "row",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "column",
+    },
+  },
+});
 
 export function Header() {
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  // Avoid useMediaQuery for rendering layout since it takes a bit to kick in
+  // const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const classes = styles();
   return (
-    <Box
-      component="nav"
-      display="flex"
-      flexDirection={matches ? "column" : "row"}
-      flex={"1"}
-      alignItems="center"
-      justifyContent="space-around"
-      padding={theme.spacing()}
-      textAlign="center"
-      bgcolor={"#fff"}
-    >
+    <Box component="nav" className={classes.headerRoot}>
       <MyLink href={"/"} icon={<i className="fas fa-home" />} text="Home" />
       <MyLink
         href={"/posts/first-post"}

@@ -21,6 +21,16 @@ const styles = makeStyles({
     top: 0,
     zIndex: 1000,
   },
+  main: {
+    maxHeight: "100vh",
+    overflow: "auto",
+    flex: 1,
+    display: "flex",
+    justifyContent: "center",
+    [theme.breakpoints.up("sm")]: {
+      alignItems: "center",
+    },
+  },
   footer: {
     position: "sticky",
     bottom: 0,
@@ -29,10 +39,11 @@ const styles = makeStyles({
 });
 
 export default function Layout({ children }: { children: ReactNode }) {
+  const classes = styles();
+
   const [url] = useState(() =>
     typeof window !== "undefined" ? window.location.hostname : ""
   );
-  const classes = styles();
   return (
     <Box className={classes.root}>
       <Head>
@@ -57,14 +68,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <Header />
       </Box>
 
-      <Box
-        component="main"
-        flex="1"
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Box component="main" className={classes.main}>
         {children}
       </Box>
 

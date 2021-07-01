@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, List, ListItem, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import theme from "../styles/theme";
 
 const styles = makeStyles({
   root: {
@@ -13,7 +12,8 @@ const styles = makeStyles({
     },
   },
   listRoot: {
-    paddingBottom: theme.spacing(4),
+    overflow: "auto",
+    maxHeight: "100vh",
   },
 });
 

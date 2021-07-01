@@ -1,7 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
-import MuiLink from "@material-ui/core/Link";
-import { Box, Typography } from "@material-ui/core";
+import { Box, Link, ListItem, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 const styles = makeStyles({
@@ -11,18 +10,26 @@ const styles = makeStyles({
   },
 });
 
+const listStyles = makeStyles({
+  root: {
+    justifyContent: "center",
+    textAlign: "center",
+  },
+});
+
 // A styled version of the Next.js Link component:
 // https://nextjs.org/docs/#with-link
 function MyLink(props: any) {
-  const { href, className, innerRef, icon, text, component, ...other } = props;
+  const { href, innerRef, icon, text, ...other } = props;
   const classes = styles();
+  const listClasses = listStyles();
   return (
     <NextLink href={href} passHref>
-      <MuiLink
-        className={className}
+      <ListItem
+        classes={listClasses}
         ref={innerRef}
         href={href}
-        component={component}
+        component={Link}
         {...other}
       >
         <Typography classes={classes}>
@@ -33,7 +40,7 @@ function MyLink(props: any) {
             {text}
           </Box>
         </Typography>
-      </MuiLink>
+      </ListItem>
     </NextLink>
   );
 }
