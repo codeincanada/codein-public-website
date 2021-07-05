@@ -25,6 +25,12 @@ export default class MyDocument extends Document {
           `,
             }}
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+            rel="stylesheet"
+          />
           {/* <title>_Document</title>*/}
           {/* PWA primary color */}
           {/* <meta name="theme-color" content={theme.palette.primary.main} />*/}
