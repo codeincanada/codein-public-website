@@ -9,7 +9,9 @@ import theme from "../styles/theme";
 import Head from "next/head";
 import { SplitFactory } from "@splitsoftware/splitio-react";
 /* Global imports should be here -- not in the Layout partial */
-export const isProduction = process.env.NEXT_PUBLIC_VERCEL_ENV === "production";
+export const isProduction =
+  process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ||
+  process.env.NEXT_PUBLIC_VERCEL_ENV === "preview";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
