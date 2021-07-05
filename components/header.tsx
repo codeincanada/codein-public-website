@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Box } from "@material-ui/core";
+import { Box, useMediaQuery } from "@material-ui/core";
 import theme from "../styles/theme";
 import MyLink from "./myLink";
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,7 +26,7 @@ const styles = makeStyles({
 
 export function Header() {
   // Avoid useMediaQuery for rendering layout since it takes a bit to kick in
-  // const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   const classes = styles();
   // FEATURE FLAG: Login_form
   const { isReadyFromCache, isReady } = useContext(SplitContext);
@@ -50,7 +50,8 @@ export function Header() {
         text="Slack"
         showLabelInMobile="Join now"
       />
-      {(isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
+      {(isReadyFromCache || isReady) &&
+      (!!matches || treatmentConfig.treatment === "on") ? (
         <>
           <MyLink
             target="_blank"
