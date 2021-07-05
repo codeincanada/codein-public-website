@@ -10,6 +10,7 @@ export const EXPERIMENTS = {
   TIME: "time_component",
   DATE: "date_component",
   LOGIN_FORM: "Login_form",
+  SOCIAL_MEDIA_LINKS: "social_media_links",
 };
 
 export default function Home() {

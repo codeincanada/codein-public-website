@@ -21,6 +21,7 @@ const listStyles = makeStyles({
 // https://nextjs.org/docs/#with-link
 function MyLink(props: any) {
   const { href, innerRef, icon, text, ...other } = props;
+  const { showLabelInMobile } = other;
   const classes = styles();
   const listClasses = listStyles();
   return (
@@ -33,11 +34,22 @@ function MyLink(props: any) {
         {...other}
       >
         <Typography classes={classes}>
-          <Box component={"span"} display={"inline-block"}>
+          <Box
+            color={showLabelInMobile ? "crimson" : "black"}
+            component={"span"}
+            display={"inline-block"}
+          >
             {icon}
           </Box>
-          <Box component={"span"} display={{ xs: "none", sm: "inline" }}>
-            {text}
+          <Box
+            color={showLabelInMobile ? "crimson" : "black"}
+            component={"span"}
+            display={{
+              xs: showLabelInMobile ? "inline" : "none",
+              sm: "inline",
+            }}
+          >
+            {showLabelInMobile ? showLabelInMobile : text}
           </Box>
         </Typography>
       </ListItem>
