@@ -1,6 +1,14 @@
 import { InputAdornment, TextField } from "@material-ui/core";
-import React, { ChangeEvent, FocusEvent, useEffect, useState } from "react";
+import React, {
+  ChangeEvent,
+  FocusEvent,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
+import { EXPERIMENTS } from "../pages";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +41,11 @@ const FormWithEmailInput = () => {
     INITIAL_STATE: "Enter your email",
   };
 
+  // FEATURE FLAG: Login_form
+  const { isReadyFromCache, isReady } = useContext(SplitContext);
+  const treatments = useTreatments([EXPERIMENTS.LOGIN_FORM]);
+  const treatmentConfig = treatments[EXPERIMENTS.LOGIN_FORM];
+
   function handleError(errorMessage: string) {
     const _ = [...errorMessages];
     _.push(errorMessage);
@@ -58,7 +71,7 @@ const FormWithEmailInput = () => {
     setHasError(errorMessages.length > 0);
   }, [errorMessages]);
 
-  return (
+  return (isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
     <div className={classes.root}>
       <TextField
         InputProps={{
@@ -79,7 +92,7 @@ const FormWithEmailInput = () => {
         }
       />
     </div>
-  );
+  ) : null;
 };
 
 export default FormWithEmailInput;
