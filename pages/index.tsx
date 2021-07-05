@@ -9,6 +9,7 @@ import {
 export const EXPERIMENTS = {
   TIME: "time_component",
   DATE: "date_component",
+  LOGIN_FORM: "Login_form",
 };
 
 export default function Home() {
