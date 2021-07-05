@@ -5,6 +5,7 @@ import {
   DateComponent,
   TimeComponent,
 } from "../components/experimentsComponent";
+import { BJJ } from "../components/BJJ";
 
 export const EXPERIMENTS = {
   TIME: "time_component",
@@ -21,6 +22,7 @@ export default function Home() {
         <FormWithEmailInput />
         <TimeComponent />
         <DateComponent />
+        <BJJ></BJJ>
       </Grid>
     </Layout>
   );

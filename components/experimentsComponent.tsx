@@ -1,10 +1,9 @@
 import React, { ReactNode, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Box, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
 import { TreatmentWithConfig } from "@splitsoftware/splitio-react/types/splitio/splitio";
-import { isProduction } from "../pages/_app";
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -42,24 +41,23 @@ function FeatureFlagReady({
   const { treatment } = treatmentConfig;
   return (
     <>
-      {treatment === "on" ? (
-        <ComponentBody content={children} />
-      ) : (
-        <PlaceholderComponent
+      {
+        treatment === "on" ? <ComponentBody content={children} /> : null
+        /* <PlaceholderComponent
           variant={placeholderComponentVariants.TREATMENT_OFF}
         >
           {JSON.stringify(treatmentConfig)}
-        </PlaceholderComponent>
-      )}
+        </PlaceholderComponent>*/
+      }
     </>
   );
 }
-const placeholderComponentVariants = {
+/* const placeholderComponentVariants = {
   NOT_READY: "SPLIT SDK IS NOT READY",
   TREATMENT_OFF: "THIS EXPERIMENT IS OFF",
-};
+};*/
 
-function PlaceholderComponent({
+/* function PlaceholderComponent({
   children,
   variant,
 }: {
@@ -79,7 +77,7 @@ function PlaceholderComponent({
       <pre>{children}</pre>
     </Box>
   );
-}
+}*/
 
 function TimeComponent() {
   const { isReadyFromCache, isReady } = useContext(SplitContext);
@@ -90,9 +88,8 @@ function TimeComponent() {
     <FeatureFlagReady treatmentConfig={treatmentConfig}>
       {timeString}
     </FeatureFlagReady>
-  ) : (
-    <PlaceholderComponent variant={placeholderComponentVariants.NOT_READY} />
-  );
+  ) : null;
+  // <PlaceholderComponent variant={placeholderComponentVariants.NOT_READY} />
 }
 function DateComponent() {
   const { isReadyFromCache, isReady } = useContext(SplitContext);
@@ -103,9 +100,7 @@ function DateComponent() {
     <FeatureFlagReady treatmentConfig={treatmentConfig}>
       {dateString}
     </FeatureFlagReady>
-  ) : (
-    <PlaceholderComponent variant={placeholderComponentVariants.NOT_READY} />
-  );
+  ) : null;
 }
 
 export { TimeComponent, DateComponent };
