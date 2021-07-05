@@ -12,7 +12,7 @@ import { EXPERIMENTS } from "../pages";
 
 const _styles = makeStyles({
   root: {
-    backgroundImage: "linear-gradient(to top, #fff 0%, #5a687f 100%)",
+    backgroundImage: "linear-gradient(to top, #000 0%, #5a687f 100%)",
     [theme.breakpoints.up("sm")]: {
       display: "none",
     },
