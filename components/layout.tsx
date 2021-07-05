@@ -27,9 +27,7 @@ const styles = makeStyles({
     flex: 1,
     display: "flex",
     justifyContent: "center",
-    [theme.breakpoints.up("sm")]: {
-      alignItems: "center",
-    },
+    alignItems: "center",
   },
   footer: {
     position: "sticky",
