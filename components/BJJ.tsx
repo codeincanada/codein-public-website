@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../styles/theme";
+import { Button } from "@material-ui/core";
+import { useRouter } from "next/router";
 
 const styles = makeStyles({
   root: {
@@ -12,6 +14,10 @@ const styles = makeStyles({
     color: "white",
     margin: "1rem",
     flex: 1,
+  },
+  day: {
+    color: "#c51162",
+    textShadow: "2px 2px white",
   },
   image: {
     boxShadow:
@@ -25,43 +31,14 @@ const styles = makeStyles({
       position: "absolute",
       padding: "0 8px",
       lineHeight: "0.75em",
+      top: "20vh",
     },
   },
 });
 
 export function BJJ() {
   const classes = styles();
-
-  function getDay() {
-    const day = new Date(Date.now()).getDay();
-    switch (day) {
-      case 0: {
-        return "Sunday";
-      }
-      case 1: {
-        return "Monday";
-      }
-      case 2: {
-        return "Tuesday";
-      }
-      case 3: {
-        return "Wednesday";
-      }
-      case 4: {
-        return "Thursday";
-      }
-      case 5: {
-        return "Friday";
-      }
-      case 6: {
-        return "Saturday";
-      }
-      default: {
-        return "Today";
-      }
-    }
-  }
-
+  const router = useRouter();
   return (
     <div
       className={classes.root}
@@ -74,7 +51,54 @@ export function BJJ() {
         src="/images/bjj-1080px.jpg"
         alt="Credits: https://unsplash.com/photos/7MRajrPiTqw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
       />
-      <span className={classes.text}>{getDay()} is a great day to roll</span>
+      <span className={classes.text}>
+        <span id="day" className={classes.day}>
+          {getDay()}
+        </span>{" "}
+        is a great day to roll
+      </span>
+      <Button
+        variant="contained"
+        color="secondary"
+        startIcon={<i className="fab fa-slack" />}
+        onClick={() =>
+          router.push(
+            "https://join.slack.com/t/dieppe-ca/shared_invite/zt-rweiadad-D_2MIdIggWyoQOIRzX5fnw"
+          )
+        }
+      >
+        Click here to connect
+      </Button>
     </div>
   );
+}
+
+export function getDay() {
+  const day = new Date(Date.now()).getDay();
+  switch (day) {
+    case 0: {
+      return "Sunday";
+    }
+    case 1: {
+      return "Monday";
+    }
+    case 2: {
+      return "Tuesday";
+    }
+    case 3: {
+      return "Wednesday";
+    }
+    case 4: {
+      return "Thursday";
+    }
+    case 5: {
+      return "Friday";
+    }
+    case 6: {
+      return "Saturday";
+    }
+    default: {
+      return "Today";
+    }
+  }
 }
