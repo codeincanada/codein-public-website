@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   BottomNavigation,
   BottomNavigationAction,
@@ -7,6 +7,8 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../styles/theme";
+import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
+import { EXPERIMENTS } from "../pages";
 
 const _styles = makeStyles({
   root: {
@@ -28,6 +30,10 @@ const _styles = makeStyles({
 
 export function Footer() {
   const styles = _styles();
+  // FEATURE FLAG: mobile_only_footer_controls
+  const { isReadyFromCache, isReady } = useContext(SplitContext);
+  const treatments = useTreatments([EXPERIMENTS.MOBILE_ONLY_FOOTER_CONTROLS]);
+  const treatmentConfig = treatments[EXPERIMENTS.MOBILE_ONLY_FOOTER_CONTROLS];
   return (
     <Box className={styles.root}>
       <Box textAlign="center" color="white">
@@ -40,32 +46,34 @@ export function Footer() {
           Made in 🇨🇦 with <i className="fas fa-heart" />
         </Typography>
       </Box>
-      <BottomNavigation>
-        <BottomNavigationAction
-          classes={{
-            label: styles.label,
-          }}
-          label="Favorites"
-          icon={<i className="fa fa-heart" />}
-          showLabel
-        />
-        <BottomNavigationAction
-          classes={{
-            label: styles.label,
-          }}
-          label="Add"
-          icon={<i className="fas fa-plus" />}
-          showLabel
-        />
-        <BottomNavigationAction
-          classes={{
-            label: styles.label,
-          }}
-          label="Delete"
-          icon={<i className="fas fa-trash-alt" />}
-          showLabel
-        />
-      </BottomNavigation>
+      {(isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
+        <BottomNavigation>
+          <BottomNavigationAction
+            classes={{
+              label: styles.label,
+            }}
+            label="Favorites"
+            icon={<i className="fa fa-heart" />}
+            showLabel
+          />
+          <BottomNavigationAction
+            classes={{
+              label: styles.label,
+            }}
+            label="Add"
+            icon={<i className="fas fa-plus" />}
+            showLabel
+          />
+          <BottomNavigationAction
+            classes={{
+              label: styles.label,
+            }}
+            label="Delete"
+            icon={<i className="fas fa-trash-alt" />}
+            showLabel
+          />
+        </BottomNavigation>
+      ) : null}
     </Box>
   );
 }

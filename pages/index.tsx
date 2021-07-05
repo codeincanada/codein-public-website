@@ -11,6 +11,7 @@ export const EXPERIMENTS = {
   DATE: "date_component",
   LOGIN_FORM: "Login_form",
   SOCIAL_MEDIA_LINKS: "social_media_links",
+  MOBILE_ONLY_FOOTER_CONTROLS: "mobile_only_footer_controls",
 };
 
 export default function Home() {
