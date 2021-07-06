@@ -25,6 +25,17 @@ export function ArticleList() {
       <ListItem
         classes={classes}
         component={Link}
+        href={
+          "https://stackoverflow.com/questions/31649267/how-to-kill-a-nodejs-process-in-linux"
+        }
+        target="_blank"
+        rel="noreferrer"
+      >
+        <pre>sudo pkill -f node</pre>
+      </ListItem>
+      <ListItem
+        classes={classes}
+        component={Link}
         href={"https://twitter.com/iamakulov/status/1385230664648253443"}
         target="_blank"
         rel="noreferrer"
