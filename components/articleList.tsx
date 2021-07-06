@@ -31,7 +31,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <pre>sudo pkill -f node</pre>
+        [so] <pre>sudo pkill -f node</pre>
       </ListItem>
       <ListItem
         classes={classes}
@@ -40,7 +40,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>Memo and Context issues</Typography>
+        <Typography>[twitter] Memo and Context issues</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -49,7 +49,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>useEffect as a pro</Typography>
+        <Typography>[overreacted] useEffect as a pro</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -60,7 +60,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>useState Lazy Initialization</Typography>
+        <Typography>[KCD] useState Lazy Initialization</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -71,7 +71,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>React➕️Typescript best practices</Typography>
+        <Typography>[KCD] React + ️Typescript best practices</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -91,16 +91,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>Optimize your React app</Typography>
-      </ListItem>
-      <ListItem
-        classes={classes}
-        component={Link}
-        href={"https://tailwindcss.com/docs/cursor"}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Typography>Tailwind docs 📌</Typography>
+        <Typography>[React] Optimize your app</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -109,7 +100,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>How to incrementally start using Next.js</Typography>
+        <Typography>[nextjs] How to start incrementally</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -118,7 +109,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>Node.js official docs</Typography>
+        <Typography>[Node] Official docs</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -129,7 +120,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>Cassandra with Node (Azure)</Typography>
+        <Typography>[Azure] Cassandra with Node</Typography>
       </ListItem>
       <ListItem
         classes={classes}
@@ -138,7 +129,7 @@ export function ArticleList() {
         target="_blank"
         rel="noreferrer"
       >
-        <Typography>Composition with React ✅</Typography>
+        <Typography>[KCD] Composition with React ✅</Typography>
       </ListItem>
     </List>
   );
