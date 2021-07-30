@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import { makeStyles } from "@material-ui/core/styles";
 import theme from "../styles/theme";
 import { Button } from "@material-ui/core";
 import { useRouter } from "next/router";
+import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
+import { EXPERIMENTS } from "../pages";
 
 const styles = makeStyles({
   root: {
@@ -39,7 +41,11 @@ const styles = makeStyles({
 export function BJJ() {
   const classes = styles();
   const router = useRouter();
-  return (
+  const { isReadyFromCache, isReady } = useContext(SplitContext);
+  const treatments = useTreatments([EXPERIMENTS.BJJ]);
+  const treatmentConfig = treatments[EXPERIMENTS.BJJ];
+
+  return (isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
     <div
       className={classes.root}
       title="Credits: https://unsplash.com/photos/7MRajrPiTqw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
@@ -70,7 +76,7 @@ export function BJJ() {
         Click here to connect
       </Button>
     </div>
-  );
+  ) : null;
 }
 
 export function getDay() {

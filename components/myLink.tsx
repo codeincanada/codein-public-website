@@ -31,7 +31,6 @@ function MyLink(props: any) {
         ref={innerRef}
         href={href}
         component={Link}
-        {...other}
       >
         <Typography classes={classes}>
           <Box

@@ -13,6 +13,7 @@ export const EXPERIMENTS = {
   LOGIN_FORM: "Login_form",
   SOCIAL_MEDIA_LINKS: "social_media_links",
   MOBILE_ONLY_FOOTER_CONTROLS: "mobile_only_footer_controls",
+  BJJ: "bjj-component",
 };
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
         <FormWithEmailInput />
         <TimeComponent />
         <DateComponent />
-        <BJJ></BJJ>
+        <BJJ />
       </Grid>
     </Layout>
   );
