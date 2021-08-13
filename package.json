@@ -12,7 +12,7 @@
     "@material-ui/core": "^4.11.4",
     "@material-ui/lab": "^4.0.0-alpha.58",
     "@splitsoftware/splitio-react": "^1.2.6",
-    "next": "^10.0.0",
+    "next": "^11.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
