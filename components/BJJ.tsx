@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import Image from "next/image";
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../styles/theme";
-import { Button } from "@material-ui/core";
 import { useRouter } from "next/router";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
+import { Button } from "@mui/material";
+/*
 
 const styles = makeStyles({
   root: {
@@ -37,9 +36,10 @@ const styles = makeStyles({
     },
   },
 });
+*/
 
 export function BJJ() {
-  const classes = styles();
+  // const classes = styles();
   const router = useRouter();
   const { isReadyFromCache, isReady } = useContext(SplitContext);
   const treatments = useTreatments([EXPERIMENTS.BJJ]);
@@ -47,21 +47,20 @@ export function BJJ() {
 
   return (isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
     <div
-      className={classes.root}
+      // className={classes.root}
       title="Credits: https://unsplash.com/photos/7MRajrPiTqw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
     >
       <Image
-        className={classes.image}
+        // className={classes.image}
         width={1080}
         height={720}
         src="/images/bjj-1080px.jpg"
         alt="Credits: https://unsplash.com/photos/7MRajrPiTqw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
       />
-      <span className={classes.text}>
-        <span id="day" className={classes.day}>
-          {getDay()}
-        </span>{" "}
-        is a great day to roll
+      {/* <span className={classes.text}>*/}
+      <span>
+        {/* <span id="day" className={classes.day}>*/}
+        <span id="day">{getDay()}</span> is a great day to roll
       </span>
       <Button
         variant="contained"

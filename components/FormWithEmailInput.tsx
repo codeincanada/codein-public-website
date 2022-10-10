@@ -1,4 +1,3 @@
-import { InputAdornment, TextField } from "@material-ui/core";
 import React, {
   ChangeEvent,
   FocusEvent,
@@ -6,9 +5,10 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
+import { InputAdornment, TextField } from "@mui/material";
+/*
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,13 +23,14 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
 }));
+*/
 
 function AvatarIcon() {
   return <i className="far fa-user" />;
 }
 
 const FormWithEmailInput = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [hasError, setHasError] = useState<boolean>(false);
   const [errorMessages, setErrorMessages] = useState<string[]>([]);
   useEffect(() => {
@@ -72,7 +73,8 @@ const FormWithEmailInput = () => {
   }, [errorMessages]);
 
   return (isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
-    <div className={classes.root}>
+    // <div className={classes.root}>
+    <div>
       <TextField
         InputProps={{
           startAdornment: (

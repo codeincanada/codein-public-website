@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from "../lib/gtag";
-import { ServerStyleSheets } from "@material-ui/core";
 import React from "react";
 
 export default class MyDocument extends Document {
@@ -31,6 +30,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
             rel="stylesheet"
           />
+          <title>w-b.dev</title>
           {/* <title>_Document</title>*/}
           {/* PWA primary color */}
           {/* <meta name="theme-color" content={theme.palette.primary.main} />*/}
@@ -69,23 +69,9 @@ MyDocument.getInitialProps = async (ctx) => {
   // 3. app.render
   // 4. page.render
 
-  // Render app and page and get the context of the page with collected side effects.
-  const sheets = new ServerStyleSheets();
-  const originalRenderPage = ctx.renderPage;
-
-  ctx.renderPage = () =>
-    originalRenderPage({
-      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
-    });
-
   const initialProps = await Document.getInitialProps(ctx);
 
   return {
     ...initialProps,
-    // Styles fragment is rendered after the app and page rendering finish.
-    styles: [
-      ...React.Children.toArray(initialProps.styles),
-      sheets.getStyleElement(),
-    ],
   };
 };
