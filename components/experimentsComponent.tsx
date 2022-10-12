@@ -1,9 +1,9 @@
 import React, { ReactNode, useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Typography } from "@material-ui/core";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
 import { TreatmentWithConfig } from "@splitsoftware/splitio-react/types/splitio/splitio";
+import { Typography } from "@mui/material";
+/*
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -23,11 +23,13 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "bold",
   },
 }));
+*/
 
 const ComponentBody = ({ content }: { content?: ReactNode }) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
-    <Typography classes={{ root: classes.solidResult }}>{content}</Typography>
+    // <Typography classes={{ root: classes.solidResult }}>{content}</Typography>
+    <Typography>{content}</Typography>
   );
 };
 

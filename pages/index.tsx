@@ -1,11 +1,11 @@
 import Layout from "../components/layout";
 import FormWithEmailInput from "../components/FormWithEmailInput";
-import { Grid } from "@material-ui/core";
 import {
   DateComponent,
   TimeComponent,
 } from "../components/experimentsComponent";
 import { BJJ } from "../components/BJJ";
+import { Grid } from "@mui/material";
 
 export const EXPERIMENTS = {
   TIME: "time_component",

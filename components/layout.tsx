@@ -2,9 +2,8 @@ import React, { ReactNode, useState } from "react";
 import Head from "next/head";
 import { Header } from "./header";
 import { Footer } from "./footer";
-import { Box } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import theme from "../styles/theme";
+import { Box } from "@mui/material";
+/*
 
 const styles = makeStyles({
   root: {
@@ -35,15 +34,16 @@ const styles = makeStyles({
     zIndex: 1000,
   },
 });
+*/
 
 export default function Layout({ children }: { children: ReactNode }) {
-  const classes = styles();
+  // const classes = styles();
 
   const [url] = useState(() =>
     typeof window !== "undefined" ? window.location.hostname : ""
   );
   return (
-    <Box className={classes.root}>
+    <Box>
       <Head>
         <meta name="referrer" content="origin" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -62,15 +62,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         <title>{url}</title>
       </Head>
 
-      <Box component="header" className={classes.header}>
+      <Box component="header">
         <Header />
       </Box>
 
-      <Box component="main" className={classes.main}>
-        {children}
-      </Box>
+      <Box component="main">{children}</Box>
 
-      <Box component="footer" className={classes.footer}>
+      <Box component="footer">
         <Footer />
       </Box>
     </Box>

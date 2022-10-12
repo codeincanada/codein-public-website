@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { Box, useMediaQuery } from "@material-ui/core";
-import theme from "../styles/theme";
 import MyLink from "./myLink";
-import { makeStyles } from "@material-ui/core/styles";
 import { SplitContext, useTreatments } from "@splitsoftware/splitio-react";
 import { EXPERIMENTS } from "../pages";
+import { Box } from "@mui/material";
 
+/*
 const styles = makeStyles({
   headerRoot: {
     overflow: "auto",
@@ -23,17 +22,19 @@ const styles = makeStyles({
     },
   },
 });
+*/
 
 export function Header() {
   // Avoid useMediaQuery for rendering layout since it takes a bit to kick in
-  const matches = useMediaQuery(theme.breakpoints.up("sm"));
-  const classes = styles();
+  // const matches = useMediaQuery(theme.breakpoints.up("sm"));
+  // const classes = styles();
   // FEATURE FLAG: Login_form
   const { isReadyFromCache, isReady } = useContext(SplitContext);
   const treatments = useTreatments([EXPERIMENTS.SOCIAL_MEDIA_LINKS]);
   const treatmentConfig = treatments[EXPERIMENTS.SOCIAL_MEDIA_LINKS];
   return (
-    <Box component="nav" className={classes.headerRoot}>
+    // <Box component="nav" className={classes.headerRoot}>
+    <Box component="nav">
       <MyLink href={"/"} icon={<i className="fas fa-home" />} text="Home" />
       <MyLink
         href={"/posts/first-post"}
@@ -50,8 +51,7 @@ export function Header() {
         text="Slack"
         showLabelInMobile="Join now"
       />
-      {(isReadyFromCache || isReady) &&
-      (!!matches || treatmentConfig.treatment === "on") ? (
+      {(isReadyFromCache || isReady) && treatmentConfig.treatment === "on" ? (
         <>
           <MyLink
             target="_blank"

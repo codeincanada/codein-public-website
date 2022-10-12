@@ -4,10 +4,9 @@ import "../styles/global.css";
 import * as gtag from "../lib/gtag";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
-import { ThemeProvider } from "@material-ui/core";
-import theme from "../styles/theme";
 import Head from "next/head";
 import { SplitFactory } from "@splitsoftware/splitio-react";
+import { CssBaseline } from "@mui/material";
 /* Global imports should be here -- not in the Layout partial */
 export const isProduction =
   process.env.NEXT_PUBLIC_VERCEL_ENV === "production" ||
@@ -53,11 +52,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <title>_App.tsx</title>
       </Head>
       <SplitFactory config={splitConfig}>
-        <ThemeProvider theme={theme}>
+        <>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          {/* <CssBaseline />*/}
+          <CssBaseline />
           <Component {...pageProps} />
-        </ThemeProvider>
+        </>
       </SplitFactory>
     </>
   );

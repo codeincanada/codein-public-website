@@ -1,12 +1,4 @@
-// eslint-disable-next-line no-undef
-export let GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
-
-if (typeof window !== "undefined") {
-  if (window.location.hostname.includes("codein")) {
-    // eslint-disable-next-line no-undef
-    GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID_CODEIN_CA;
-  }
-}
+export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 interface GTagEvent {
   action: string;

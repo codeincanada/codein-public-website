@@ -1,11 +1,6 @@
-import {
-  FormControl,
-  Input,
-  InputAdornment,
-  InputLabel,
-} from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { FormControl, InputAdornment, InputLabel, Input } from "@mui/material";
+/*
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,20 +16,23 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
 }));
+*/
 
 function AvatarIcon() {
   return <i className="far fa-user" />;
 }
 
 const FormWithSingleInput = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [hasError, setHasError] = useState(false);
   useEffect(() => {
     setHasError(true);
   }, []);
   return (
-    <div className={classes.root}>
-      <FormControl error={hasError} className={classes.margin}>
+    // <div className={classes.root}>
+    <div>
+      {/* <FormControl error={hasError} className={classes.margin}>*/}
+      <FormControl error={hasError}>
         <InputLabel htmlFor="input-with-icon-adornment">
           Enter your email
         </InputLabel>
